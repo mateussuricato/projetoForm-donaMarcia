@@ -14,6 +14,7 @@ const Select = ({ img, selected }: SelectProps) => {
           {selected}
         </option>
         <option>2</option>
+        <option>punheteiro</option>
       </S.Select>
     </S.SelectOverlay>
   );
