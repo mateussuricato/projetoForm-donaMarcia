@@ -5,6 +5,6 @@ export const Form = styled.form`
   flex-direction: column;
   width: 400px;
   height: 600px;
-  background-color: #e45171;
+  background-color: #FAFAFA;
   border-radius: 10px;
 `;
