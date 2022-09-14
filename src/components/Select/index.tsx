@@ -1,14 +1,19 @@
 import * as S from "./styles";
-import cargo from "../../assets/images/cargo.png";
 
-const Select = () => {
+interface SelectProps {
+  img?: string;
+  selected?: string
+}
+
+const Select = ({ img, selected }: SelectProps) => {
   return (
     <S.SelectOverlay>
-      <img src={cargo} alt="" />
+      <img src={img} alt="" />
       <S.Select>
         <option disabled selected>
-          Cargo...
+          {selected}
         </option>
+        <option>2</option>
       </S.Select>
     </S.SelectOverlay>
   );
