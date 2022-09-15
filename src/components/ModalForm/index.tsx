@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import InputRadio from "../InputRadio";
+import { useState } from "react";
+import InputCheckbox from "../InputCheckbox";
 import InputText from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
+import { atividades } from "../../mocks";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("");
@@ -29,25 +30,27 @@ const ModalForm = () => {
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
           ></InputText>
-          <Select selected={"Atividades que o cargo exerce"}></Select>
-          <Select></Select>
-          <Select selected={"Habilidades necessárias"}></Select>
-          <Select></Select>
         </S.InputContainer>
-        <S.RadioContainer>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-          <InputRadio></InputRadio>
-        </S.RadioContainer>
+        <S.Titulo>Atividades que o cargo exerce</S.Titulo>
+        <S.CheckboxContainer>
+          {atividades.map((elem) => {
+            return <InputCheckbox atividades={elem.name}/>
+          })}
+        </S.CheckboxContainer>
+        {/* <S.CheckboxContainer>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+          <InputCheckbox></InputCheckbox>
+        </S.CheckboxContainer> */}
       </S.FormOverlay>
     </div>
   );

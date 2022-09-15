@@ -1,24 +1,33 @@
 import styled from "styled-components";
 
 export const FormOverlay = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 300px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 10px;
 `;
 
 export const InputContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   gap: 30px;
   padding: 40px;
 `;
 
-export const RadioContainer = styled.div`
+export const CheckboxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   gap: 30px;
   padding: 10px 50px;
 `;
+
+export const Titulo = styled.h1`
+  background-color: #fafafa;
+  margin: auto;
+  text-align: center;
+  padding: 0 40px 40px 40px;
+`

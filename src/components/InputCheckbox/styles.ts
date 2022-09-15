@@ -23,5 +23,6 @@ export const RadioOverlay = styled.div`
 
   span {
     background-color: #fafafa;
+    text-align: center;
   }
 `;
