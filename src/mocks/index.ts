@@ -22,3 +22,4 @@ export const salario = [
     value: 1900,
   },
 ];
+
