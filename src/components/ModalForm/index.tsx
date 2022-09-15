@@ -70,20 +70,17 @@ const ModalForm = () => {
             );
           })}
         </S.CheckboxContainer>
-        {/* <S.CheckboxContainer>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-        </S.CheckboxContainer> */}
+        <S.InputContainer>
+          <Select
+            img={"https://i.imgur.com/LNAjnQH.png"}
+          ></Select>
+          <InputText
+            salario={salario}
+            value={"1.000,00"}
+            placeholder={"Salário..."}
+            img={"https://i.imgur.com/LNAjnQH.png"}
+          ></InputText>
+        </S.InputContainer>
       </S.FormOverlay>
     </div>
   );

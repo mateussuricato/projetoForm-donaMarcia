@@ -9,7 +9,7 @@ interface SelectProps {
   setSelectValue?: any;
 }
 
-const Select = ({ img, selected, setSalario, selectValue, setSelectValue, }: SelectProps) => {
+const Select = ({ img, selectValue, setSelectValue, }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
