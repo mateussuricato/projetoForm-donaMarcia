@@ -9,17 +9,17 @@ interface SelectProps {
   setSelectValue?: any;
 }
 
-const Select = ({ img, selected, setSalario, selectValue,setSelectValue }: SelectProps) => {
+const Select = ({ img, selected, setSalario, selectValue, setSelectValue, }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
       <S.Select value={selectValue} onChange={e => setSelectValue(e.target.value)}>
-        <option disabled selected>
-          {selected}
+        <option selected disabled>
+          {selectValue}
         </option>
         {cargos.map((elem) => {
           return (
-            <option key={elem.id} value={elem.name}>
+            <option  key={elem.id} value={elem.name}>
               {elem.name}
             </option>
           );
