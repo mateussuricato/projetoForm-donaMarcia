@@ -6,20 +6,23 @@ import * as S from "./styles";
 import { atividades } from "../../mocks";
 
 const ModalForm = () => {
-  const [selectValue, setSelectValue] = useState("");
+  const [selectValue, setSelectValue] = useState("Selecione o cargo...");
+
 
   let salario = "";
 
   if (selectValue === "Balconista") {
     salario = Number(salario + 1400).toFixed(2);
+  } else if (selectValue === "Confeiteiro(a)") {
+    salario = Number(salario + 2200).toFixed(2);
   }
+
 
   return (
     <div>
       <S.FormOverlay>
         <S.InputContainer>
           <Select
-            selected={"Cargo..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
             selectValue={selectValue}
             setSelectValue={setSelectValue}
@@ -34,7 +37,13 @@ const ModalForm = () => {
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
         <S.CheckboxContainer>
           {atividades.map((elem) => {
-            return <InputCheckbox atividades={elem.name}/>
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                categoryId={elem.category}
+                atividades={elem.name}
+              />
+            );
           })}
         </S.CheckboxContainer>
         {/* <S.CheckboxContainer>
