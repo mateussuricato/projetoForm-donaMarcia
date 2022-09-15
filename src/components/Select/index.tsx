@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { option } from "../ModalForm"
+import { cargos } from "../../mocks"
 
 interface SelectProps {
   img?: string;
@@ -14,7 +14,7 @@ const Select = ({ img, selected }: SelectProps) => {
         <option disabled selected>
           {selected}
         </option>
-        {option.map((elem) => {
+        {cargos.map((elem) => {
           return <option value={elem.name}>{elem.name}</option>;
         })}
       </S.Select>
