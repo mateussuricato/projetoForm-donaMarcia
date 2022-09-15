@@ -1,13 +1,12 @@
 import * as S from "./styles";
-import { option } from "../ModalForm"
+import { cargos } from "../../mocks"
 
 interface SelectProps {
   img?: string;
   selected?: string;
-  optiontest?: string
 }
 
-const Select = ({ img, selected, optiontest }: SelectProps) => {
+const Select = ({ img, selected }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
@@ -15,7 +14,7 @@ const Select = ({ img, selected, optiontest }: SelectProps) => {
         <option disabled selected>
           {selected}
         </option>
-        {option.map((elem) => {
+        {cargos.map((elem) => {
           return <option value={elem.name}>{elem.name}</option>;
         })}
       </S.Select>
