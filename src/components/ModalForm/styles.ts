@@ -4,7 +4,7 @@ export const FormOverlay = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 300px;
+  height: 1300px;
   background-color: #fafafa;
   border-radius: 10px;
 `;
@@ -26,8 +26,9 @@ export const CheckboxContainer = styled.div`
 `;
 
 export const Titulo = styled.h1`
+  max-width: 920px;
   background-color: #fafafa;
   margin: auto;
   text-align: center;
-  padding: 0 40px 40px 40px;
+  padding: 40px 40px 40px 40px;
 `

@@ -3,7 +3,7 @@ import InputCheckbox from "../InputCheckbox";
 import InputText from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
-import { atividades } from "../../mocks";
+import { atividades, habilidades, experiencia } from "../../mocks";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
@@ -40,7 +40,31 @@ const ModalForm = () => {
             return (
               <InputCheckbox
                 selectValue={selectValue}
-                categoryId={elem.category}
+                category={elem.category}
+                atividades={elem.name}
+              />
+            );
+          })}
+        </S.CheckboxContainer>
+        <S.Titulo>Habilidades necessárias</S.Titulo>
+        <S.CheckboxContainer>
+          {habilidades.map((elem) => {
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                category={elem.category}
+                atividades={elem.name}
+              />
+            );
+          })}
+        </S.CheckboxContainer>
+        <S.Titulo>Experiência necessária</S.Titulo>
+        <S.CheckboxContainer>
+          {experiencia.map((elem) => {
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                category={elem.category}
                 atividades={elem.name}
               />
             );

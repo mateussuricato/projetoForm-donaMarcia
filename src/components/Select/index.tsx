@@ -19,7 +19,7 @@ const Select = ({ img, selected, setSalario, selectValue, setSelectValue, }: Sel
         </option>
         {cargos.map((elem) => {
           return (
-            <option  key={elem.id} value={elem.name}>
+            <option key={elem.id} value={elem.name}>
               {elem.name}
             </option>
           );
