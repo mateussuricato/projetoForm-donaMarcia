@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const InputOverlay = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px 10px;
   background-color: #fff;
   border: 1px #00000020 solid;
@@ -17,6 +19,12 @@ export const InputOverlay = styled.div`
     width: 30px;
     background-color: #fff;
   }
+
+  p {
+    background-color: white;
+    width: 20px;
+    font-size: 18px;
+  }
 `;
 
 export const Input = styled.input`
@@ -27,17 +35,12 @@ export const Input = styled.input`
   padding-left: 10px;
   cursor: text;
   font-size: 16px;
-
-  option {
-  padding: 10px;
-  color: black;
-
-}
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 
   :focus {
     box-shadow: 0 0 0 0;
     outline: 0;
   }
-
-
 `;

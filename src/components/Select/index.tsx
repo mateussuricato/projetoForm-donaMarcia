@@ -1,21 +1,28 @@
 import * as S from "./styles";
-import { cargos } from "../../mocks"
+import { cargos } from "../../mocks";
 
 interface SelectProps {
   img?: string;
   selected?: string;
+  setSalario?: any;
+  selectValue?: any;
+  setSelectValue?: any;
 }
 
-const Select = ({ img, selected }: SelectProps) => {
+const Select = ({ img, selected, setSalario, selectValue,setSelectValue }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
-      <S.Select>
+      <S.Select value={selectValue} onChange={e => setSelectValue(e.target.value)}>
         <option disabled selected>
           {selected}
         </option>
         {cargos.map((elem) => {
-          return <option value={elem.name}>{elem.name}</option>;
+          return (
+            <option key={elem.id} value={elem.name}>
+              {elem.name}
+            </option>
+          );
         })}
       </S.Select>
     </S.SelectOverlay>
