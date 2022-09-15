@@ -3,21 +3,6 @@ import InputText from "../InputText";
 import Select from "../Select";
 import * as S from "./styles";
 
-export const option = [
-  {
-    id: "e7e77543-2515-4a5c-99f6-c8495ac45f0d",
-    name: "Confeitero(a)",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: "265c2b49-564a-4a5a-a758-ef7263eb2e9e",
-    name: "Balconista",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-];
-
 const ModalForm = () => {
 
   return (
