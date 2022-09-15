@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormOverlay = styled.form`
+export const FormOverlay = styled.div`
   width: 100%;
   height: 300px;
   background-color: #FAFAFA;
