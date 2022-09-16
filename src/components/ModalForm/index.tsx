@@ -36,7 +36,7 @@ const ModalForm = () => {
           <SelectEtapas img={"https://i.imgur.com/LNAjnQH.png"}></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
-        <S.CheckboxContainer>
+        <S.CheckboxContainer activescroll>
           {atividades.map((elem) => {
             return (
               <InputCheckbox
@@ -48,7 +48,7 @@ const ModalForm = () => {
           })}
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
-        <S.CheckboxContainer>
+        <S.CheckboxContainer activescroll>
           {habilidades.map((elem) => {
             return (
               <InputCheckbox

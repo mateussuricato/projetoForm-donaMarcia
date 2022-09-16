@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface ScrollProps {
+  activescroll?: boolean
+}
 
 export const FormOverlay = styled.div`
   display: flex;
@@ -29,6 +33,13 @@ export const CheckboxContainer = styled.div`
   background-color: #fafafa;
   gap: 30px;
   padding: 10px 50px;
+  min-height: 200px;
+
+  ${({activescroll}: ScrollProps) =>
+    activescroll &&
+    css`
+      overflow-y: scroll;
+    `}
 `;
 
 export const Titulo = styled.h1`
@@ -37,4 +48,4 @@ export const Titulo = styled.h1`
   margin: auto;
   text-align: center;
   padding: 40px 40px 40px 40px;
-`
+`;
