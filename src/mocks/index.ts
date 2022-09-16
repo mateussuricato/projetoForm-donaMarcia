@@ -195,7 +195,7 @@ export const habilidades = [
   },
 ];
 
-export const experiencia = [
+export const tempoexperiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "0 ano",
@@ -216,6 +216,9 @@ export const experiencia = [
     name: "3 anos ou +",
     category: "Balconista",
   },
+];
+
+export const experiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Ensino médio",
