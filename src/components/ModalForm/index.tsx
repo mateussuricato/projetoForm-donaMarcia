@@ -3,18 +3,30 @@ import InputCheckbox from "../InputCheckbox";
 import InputText from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
-import { atividades, habilidades, experiencia } from "../../mocks";
+import {
+  salario,
+  atividades,
+  habilidades,
+  experiencia,
+  tempoexperiencia,
+} from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
 
-  let salario = "";
+  let salarioValue = "";
 
-  if (selectValue === "Balconista") {
-    salario = Number(salario + 1400).toFixed(2);
+  if (selectValue === "Auxiliar de limpeza") {
+    salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
   } else if (selectValue === "Confeiteiro(a)") {
-    salario = Number(salario + 2200).toFixed(2);
+    salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
+  } else if (selectValue === "Gerente") {
+    salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
+  } else if (selectValue === "Nutricionista") {
+    salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
+  } else if (selectValue === "Recepcionista"){
+    salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
   }
 
   return (
@@ -28,7 +40,7 @@ const ModalForm = () => {
             setSelectValue={setSelectValue}
           ></Select>
           <InputText
-            salario={salario}
+            salario={salarioValue}
             value={"1.000,00"}
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
@@ -61,15 +73,30 @@ const ModalForm = () => {
         </S.CheckboxContainer>
         <S.Titulo>Experiência necessária</S.Titulo>
         <S.CheckboxContainer>
-          {experiencia.map((elem) => {
-            return (
-              <InputCheckbox
-                selectValue={selectValue}
-                category={elem.category}
-                atividades={elem.name}
-              />
-            );
-          })}
+          <h3>Tempo de experiência</h3>
+          <div className="experienciacontainer">
+            {tempoexperiencia.map((elem) => {
+              return (
+                <InputCheckbox
+                  selectValue={selectValue}
+                  category={elem.category}
+                  atividades={elem.name}
+                />
+              );
+            })}
+          </div>
+          <h3>Grau acadêmico</h3>
+          <div className="experienciacontainer">
+            {experiencia.map((elem) => {
+              return (
+                <InputCheckbox
+                  selectValue={selectValue}
+                  category={elem.category}
+                  atividades={elem.name}
+                />
+              );
+            })}
+          </div>
         </S.CheckboxContainer>
       </S.FormOverlay>
     </div>
