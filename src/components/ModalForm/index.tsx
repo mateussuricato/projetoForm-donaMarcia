@@ -20,6 +20,7 @@ const ModalForm = () => {
   return (
     <div>
       <S.FormOverlay>
+        <img className="logo" src="https://i.imgur.com/tQrHHbf.png" alt="" />
         <S.InputContainer>
           <Select
             img={"https://i.imgur.com/LNAjnQH.png"}
@@ -70,14 +71,6 @@ const ModalForm = () => {
             );
           })}
         </S.CheckboxContainer>
-        <S.InputContainer>
-          <InputText
-            salario={salario}
-            value={"1.000,00"}
-            placeholder={"Salário..."}
-            img={"https://i.imgur.com/LNAjnQH.png"}
-          ></InputText>
-        </S.InputContainer>
       </S.FormOverlay>
     </div>
   );

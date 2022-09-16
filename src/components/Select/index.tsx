@@ -17,7 +17,7 @@ const Select = ({ img, selectValue, setSelectValue, }: SelectProps) => {
         <option selected disabled>
           {selectValue}
         </option>
-        {cargos.map((elem) => {
+        {cargos.map((elem: any) => {
           return (
             <option key={elem.id} value={elem.name}>
               {elem.name}
