@@ -218,6 +218,7 @@ export const tempoexperiencia = [
   },
 ];
 
+export const experiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Ensino médio",
