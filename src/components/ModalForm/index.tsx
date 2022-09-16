@@ -4,10 +4,10 @@ import InputText from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
 import { atividades, habilidades, experiencia } from "../../mocks";
+import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
-
 
   let salario = "";
 
@@ -16,7 +16,6 @@ const ModalForm = () => {
   } else if (selectValue === "Confeiteiro(a)") {
     salario = Number(salario + 2200).toFixed(2);
   }
-
 
   return (
     <div>
@@ -33,6 +32,7 @@ const ModalForm = () => {
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
           ></InputText>
+          <SelectEtapas img={"https://i.imgur.com/LNAjnQH.png"}></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
         <S.CheckboxContainer>
@@ -71,9 +71,6 @@ const ModalForm = () => {
           })}
         </S.CheckboxContainer>
         <S.InputContainer>
-          <Select
-            img={"https://i.imgur.com/LNAjnQH.png"}
-          ></Select>
           <InputText
             salario={salario}
             value={"1.000,00"}

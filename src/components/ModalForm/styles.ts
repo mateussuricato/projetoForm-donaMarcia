@@ -19,10 +19,12 @@ export const InputContainer = styled.div`
 
 export const CheckboxContainer = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   background-color: #fafafa;
   gap: 30px;
   padding: 10px 50px;
+  height: 400px;
 `;
 
 export const Titulo = styled.h1`
