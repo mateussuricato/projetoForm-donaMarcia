@@ -3,11 +3,11 @@ import InputCheckbox from "../InputCheckbox";
 import InputText from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
-import { atividades } from "../../mocks";
+import { atividades, habilidades, experiencia } from "../../mocks";
+import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
-
 
   let salario = "";
 
@@ -16,7 +16,6 @@ const ModalForm = () => {
   } else if (selectValue === "Confeiteiro(a)") {
     salario = Number(salario + 2200).toFixed(2);
   }
-
 
   return (
     <div>
@@ -33,6 +32,7 @@ const ModalForm = () => {
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
           ></InputText>
+          <SelectEtapas img={"https://i.imgur.com/LNAjnQH.png"}></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
         <S.CheckboxContainer>
@@ -40,26 +40,44 @@ const ModalForm = () => {
             return (
               <InputCheckbox
                 selectValue={selectValue}
-                categoryId={elem.category}
+                category={elem.category}
                 atividades={elem.name}
               />
             );
           })}
         </S.CheckboxContainer>
-        {/* <S.CheckboxContainer>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-          <InputCheckbox></InputCheckbox>
-        </S.CheckboxContainer> */}
+        <S.Titulo>Habilidades necessárias</S.Titulo>
+        <S.CheckboxContainer>
+          {habilidades.map((elem) => {
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                category={elem.category}
+                atividades={elem.name}
+              />
+            );
+          })}
+        </S.CheckboxContainer>
+        <S.Titulo>Experiência necessária</S.Titulo>
+        <S.CheckboxContainer>
+          {experiencia.map((elem) => {
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                category={elem.category}
+                atividades={elem.name}
+              />
+            );
+          })}
+        </S.CheckboxContainer>
+        <S.InputContainer>
+          <InputText
+            salario={salario}
+            value={"1.000,00"}
+            placeholder={"Salário..."}
+            img={"https://i.imgur.com/LNAjnQH.png"}
+          ></InputText>
+        </S.InputContainer>
       </S.FormOverlay>
     </div>
   );

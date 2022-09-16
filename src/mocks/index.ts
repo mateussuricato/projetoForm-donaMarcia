@@ -75,3 +75,109 @@ export const atividades = [
     category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
   },
 ];
+
+export const habilidades = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Boa comunicação",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Empatia com o cliente",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Postura cordial.",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Proatividade.",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Paciência.",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Preparar e criar receitas",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Higiene",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Atenção aos detalhes",
+    category: ""
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Precisão",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Saber trabalhar em equipe",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+];
+
+export const experiencia = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "0 ano",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "1 ano",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "2 anos",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "3 anos ou +",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Ensino médio",
+    category: "Balconista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Curso técnico",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Curso superior",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+];
+
+export const etapas = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Início imediato",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Entrevista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Entrevista e teste técnico",
+  },
+];
