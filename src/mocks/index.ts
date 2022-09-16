@@ -166,3 +166,18 @@ export const experiencia = [
     category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
   },
 ];
+
+export const etapas = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Início imediato",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Entrevista",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Entrevista e teste técnico",
+  },
+];
