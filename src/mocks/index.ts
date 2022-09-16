@@ -1,11 +1,11 @@
 export const cargos = [
   {
-    id: "929344ab-734f-46a8-be1a-cf98c4c7b6e8",
-    name: "Confeiteiro(a)",
+    id: "265c2b49-564a-4a5a-a758-ef7263eb2e9e",
+    name: "Auxiliar de limpeza",
   },
   {
-    id: "0fb67b87-0d71-433f-b063-568bb001558e",
-    name: "Recepcionista",
+    id: "929344ab-734f-46a8-be1a-cf98c4c7b6e8",
+    name: "Confeiteiro(a)",
   },
   {
     id: "af7eaa0f-ec1e-474f-8626-64e248d328ba",
@@ -16,22 +16,36 @@ export const cargos = [
     name: "Nutricionista",
   },
   {
-    id: "265c2b49-564a-4a5a-a758-ef7263eb2e9e",
-    name: "Auxiliar de limpeza",
+    id: "0fb67b87-0d71-433f-b063-568bb001558e",
+    name: "Recepcionista",
   },
 ];
 
 export const salario = [
   {
-    id: "e437829d-d3cc-495a-b7d4-3aa8a6cc587e",
+    id: "0e92ff8d-c1b5-421f-bacf-0a8534f681c0",
     name: "salário 1",
-    value: 1300,
+    value: 1212,
   },
-
   {
-    id: "e437829d-d3cc-495a-b7d4-3aa8a6cc587e",
-    name: "salário 1",
-    value: 1900,
+    id: "a33b7799-5a2e-41b9-bdf5-3fb45b9b64a9",
+    name: "salário 2",
+    value: 1605,
+  },
+  {
+    id: "a8688267-7d99-4700-8c57-d17d8edd5388",
+    name: "salário 3",
+    value: 2635,
+  },
+  {
+    id: "0ded42f6-44fa-43bf-a929-3ea0124b2833",
+    name: "salário 4",
+    value: 2934,
+  },
+  {
+    id: "f688171b-a126-43f4-9555-cd3fa5e5a4b1",
+    name: "salário 5",
+    value: 1256,
   },
 ];
 
