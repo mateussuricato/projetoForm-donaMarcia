@@ -35,7 +35,7 @@ export const CheckboxContainer = styled.div`
   background-color: #fafafa;
   gap: 30px;
   padding: 10px 50px;
-  max-height: 200px;
+  max-height: 230px;
   margin: 0;
 
   ${({activescroll}: ScrollProps) =>

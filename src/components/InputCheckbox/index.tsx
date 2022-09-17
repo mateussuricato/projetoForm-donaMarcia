@@ -1,15 +1,28 @@
 import { useState } from "react";
 import * as S from "./styles";
+import { habilidades } from "../../mocks";
 
 interface InputPros {
   atividades?: string;
-  category?: string[] | string;
+  category?: string | any;
   selectValue?: any;
-  desmarcado?: any
+  desmarcado?: any;
+  habilidadesState?: any;
 }
 
-const InputCheckbox = ({ atividades, category, selectValue, desmarcado }: InputPros) => {
-  if (
+const InputCheckbox = ({
+  atividades,
+  category,
+  selectValue,
+  desmarcado,
+  habilidadesState
+}: InputPros) => {
+
+  if(habilidadesState == habilidades) {
+   return (
+    <S.Aviso>Selecione um cargo para as respectivas habilidades aparecerem  *</S.Aviso>
+   )
+  } else if (
     category === "bad47155-b140-40b3-ad7b-2207019dced8" &&
     selectValue === "Auxiliar de limpeza"
   ) {
@@ -63,7 +76,11 @@ const InputCheckbox = ({ atividades, category, selectValue, desmarcado }: InputP
     return (
       <div>
         <S.RadioOverlay>
-          {desmarcado ? <input defaultChecked type="checkbox" /> :<input type="checkbox" />}
+          {desmarcado ? (
+            <input defaultChecked type="checkbox" />
+          ) : (
+            <input type="checkbox" />
+          )}
           <span>{atividades}</span>
         </S.RadioOverlay>
       </div>

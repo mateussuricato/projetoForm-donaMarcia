@@ -26,3 +26,8 @@ export const RadioOverlay = styled.div`
     text-align: center;
   }
 `;
+
+export const Aviso = styled.p`
+  background-color: #fafafa;
+  color: red;
+`

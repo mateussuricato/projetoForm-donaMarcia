@@ -10,14 +10,14 @@ import {
   experiencia,
   tempoexperiencia,
   auxiliarlimpeza,
-  confeiteiro
+  confeiteiro,
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
   const [habilidadesState, setHabilidadesState] = useState(habilidades);
-  const [desmarcado, setDesmarcado] = useState(false)
+  const [desmarcado, setDesmarcado] = useState(false);
 
   let salarioValue = "";
 
@@ -25,10 +25,11 @@ const ModalForm = () => {
     if (selectValue === "Auxiliar de limpeza") {
       salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
       setHabilidadesState(auxiliarlimpeza);
-      setDesmarcado(true)
+      setDesmarcado(true);
     } else if (selectValue === "Confeiteiro(a)") {
-      salarioValue = Number(salarioValue + salario[1].value).toFixed(2);setHabilidadesState(confeiteiro);
-      setDesmarcado(true)
+      salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
+      setHabilidadesState(confeiteiro);
+      setDesmarcado(true);
     } else if (selectValue === "Gerente") {
       salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
     } else if (selectValue === "Nutricionista") {
@@ -69,10 +70,11 @@ const ModalForm = () => {
           })}
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
-        <S.CheckboxContainer activescroll>
+        <S.CheckboxContainer>
           {habilidadesState.map((elem) => {
             return (
               <InputCheckbox
+                habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
                 selectValue={selectValue}
                 category={elem.category}

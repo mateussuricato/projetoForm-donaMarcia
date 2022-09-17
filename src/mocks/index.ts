@@ -144,73 +144,71 @@ export const atividades = [
 
 export const habilidades = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a0",
-    name: "Boa comunicação",
-    category: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
-    cargosId: ""
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Empatia com o cliente",
-    category: "Balconista",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Postura cordial.",
-    category: "Balconista",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Proatividade.",
-    category: "Balconista",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Paciência.",
-    category: "Balconista",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Preparar e criar receitas",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Higiene",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Atenção aos detalhes",
+    name: "",
     category: "",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Precisão",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
-  },
-  {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Saber trabalhar em equipe",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
   },
 ];
 
 export const auxiliarlimpeza = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "62cfb9d1-7e1a-46ad-a5a8-e295e6d23f94",
     name: "Higiene",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    category: "",
   },
-]
+  {
+    id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
+    name: "Agilidade e organização",
+    category: "",
+  },
+  {
+    id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
+    name: "Simpatia",
+    category: "",
+  },
+  {
+    id: "0e721942-4e73-474a-a873-bb027e5c873c",
+    name: "Organização",
+    category: "",
+  },
+];
 
 export const confeiteiro = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "3e28fb69-eb86-4428-89a5-b7e22103a441",
     name: "Preparar e criar receitas",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    category: "",
   },
-]
+  {
+    id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
+    name: "Agilidade e organização",
+    category: "",
+  },
+  {
+    id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
+    name: "Simpatia",
+    category: "",
+  },
+  {
+    id: "0e721942-4e73-474a-a873-bb027e5c873c",
+    name: "Organização",
+    category: "",
+  },
+  {
+    id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
+    name: "Trabalhar em equipe",
+    category: "",
+  },
+  {
+    id: "42b747a7-7717-4918-9044-59fd1abebc35",
+    name: "Senso artístico",
+    category: "",
+  },
+  {
+    id: "42b747a7-7717-4918-9044-59fd1abebc35",
+    name: "Pensamento crítico",
+    category: "",
+  },
+];
 
 export const tempoexperiencia = [
   {
