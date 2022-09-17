@@ -12,7 +12,7 @@ export const cargos = [
     name: "Gerente",
   },
   {
-    id: "b9201d9-9ec9-4c81-8d19-987abc67ecc6",
+    id: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
     name: "Nutricionista",
   },
   {
@@ -338,22 +338,22 @@ export const tempoexperiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "0 ano",
-    categoryCargo: "Balconista",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "1 ano",
-    categoryCargo: "Balconista",
+    categoryCargo: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "2 anos",
-    categoryCargo: "Balconista",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "3 anos ou +",
-    categoryCargo: "Balconista",
+    categoryCargo: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
   },
 ];
 
@@ -361,17 +361,17 @@ export const experiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Ensino médio",
-    categoryCargo: "Balconista",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Curso técnico",
-    categoryCargo: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Curso superior",
-    categoryCargo: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryCargo: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
   },
 ];
 
