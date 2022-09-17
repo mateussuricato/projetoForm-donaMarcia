@@ -13,7 +13,7 @@ import {
   confeiteiro,
   gerente,
   nutricionista,
-  recepcionista
+  recepcionista,
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
@@ -26,7 +26,7 @@ const ModalForm = () => {
 
   if (selectValue === "Auxiliar de limpeza") {
     salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
-  }else if (selectValue === "Confeiteiro(a)") {
+  } else if (selectValue === "Confeiteiro(a)") {
     salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
   } else if (selectValue === "Gerente") {
     salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
@@ -82,7 +82,7 @@ const ModalForm = () => {
             return (
               <InputCheckbox
                 selectValue={selectValue}
-                category={elem.category}
+                category={elem.categoryCargo}
                 atividades={elem.name}
               />
             );
@@ -96,7 +96,7 @@ const ModalForm = () => {
                 habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
                 selectValue={selectValue}
-                category={elem.category}
+                category={elem.categoryCargo}
                 atividades={elem.name}
               />
             );
@@ -110,7 +110,7 @@ const ModalForm = () => {
               return (
                 <InputCheckbox
                   selectValue={selectValue}
-                  category={elem.category}
+                  category={elem.categoryCargo}
                   atividades={elem.name}
                 />
               );
@@ -122,7 +122,7 @@ const ModalForm = () => {
               return (
                 <InputCheckbox
                   selectValue={selectValue}
-                  category={elem.category}
+                  category={elem.categoryCargo}
                   atividades={elem.name}
                 />
               );
