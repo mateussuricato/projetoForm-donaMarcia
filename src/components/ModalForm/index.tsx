@@ -130,7 +130,7 @@ const ModalForm = () => {
           </div>
         </S.CheckboxContainer>
         <S.Titulo>Benefícios do cargo</S.Titulo>
-        <S.CheckboxContainer activescroll>
+        <S.CheckboxContainer>
           {beneficios.map((elem) => {
             return (
               <InputCheckbox

@@ -358,14 +358,26 @@ export const etapas = [
 export const beneficios = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Início imediato",
+    name: "Vale-alimentação",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Entrevista",
+    name: "Vale-combustível",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
-    name: "Entrevista e teste técnico",
+    name: "Plano odontológico e de saúde",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Vale-cultura",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Viagem de incentivo",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "VB Presente",
   },
 ];
