@@ -1,22 +1,22 @@
 export const cargos = [
   {
-    id: "265c2b49-564a-4a5a-a758-ef7263eb2e9e",
+    id: "bad47155-b140-40b3-ad7b-2207019dced8",
     name: "Auxiliar de limpeza",
   },
   {
-    id: "929344ab-734f-46a8-be1a-cf98c4c7b6e8",
+    id: "30120997-36cc-496a-9237-72c467e99924",
     name: "Confeiteiro(a)",
   },
   {
-    id: "af7eaa0f-ec1e-474f-8626-64e248d328ba",
+    id: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
     name: "Gerente",
   },
   {
-    id: "77e58c49-8c82-47d0-91b0-d46e625412e7",
+    id: "b9201d9-9ec9-4c81-8d19-987abc67ecc6",
     name: "Nutricionista",
   },
   {
-    id: "0fb67b87-0d71-433f-b063-568bb001558e",
+    id: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
     name: "Recepcionista",
   },
 ];

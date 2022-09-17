@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import InputCheckbox from "../InputCheckbox";
-import InputText from "../InputNumber";
+import InputNumber from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
 import {
@@ -24,9 +24,20 @@ const ModalForm = () => {
 
   let salarioValue = "";
 
+  if (selectValue === "Auxiliar de limpeza") {
+    salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
+  }else if (selectValue === "Confeiteiro(a)") {
+    salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
+  } else if (selectValue === "Gerente") {
+    salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
+  } else if (selectValue === "Nutricionista") {
+    salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
+  } else if (selectValue === "Recepcionista") {
+    salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
+  }
+
   useEffect(() => {
     if (selectValue === "Auxiliar de limpeza") {
-      salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
       setHabilidadesState(auxiliarlimpeza);
       setDesmarcado(true);
     } else if (selectValue === "Confeiteiro(a)") {
@@ -58,12 +69,11 @@ const ModalForm = () => {
             selectValue={selectValue}
             setSelectValue={setSelectValue}
           ></Select>
-          <InputText
+          <InputNumber
             salario={salarioValue}
-            value={"1.000,00"}
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
-          ></InputText>
+          ></InputNumber>
           <SelectEtapas img={"https://i.imgur.com/LNAjnQH.png"}></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
