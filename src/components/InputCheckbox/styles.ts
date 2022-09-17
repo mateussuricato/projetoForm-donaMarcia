@@ -9,8 +9,8 @@ export const RadioOverlay = styled.div`
   max-width: 400px;
 
   input {
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
     margin: auto 5px;
     cursor: pointer;
     transition: 0.3s;

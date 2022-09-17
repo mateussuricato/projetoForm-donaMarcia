@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputCheckbox from "../InputCheckbox";
 import InputText from "../InputNumber";
 import Select from "../Select";
@@ -9,25 +9,34 @@ import {
   habilidades,
   experiencia,
   tempoexperiencia,
+  auxiliarlimpeza,
+  confeiteiro
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
+  const [habilidadesState, setHabilidadesState] = useState(habilidades);
+  const [desmarcado, setDesmarcado] = useState(false)
 
   let salarioValue = "";
 
-  if (selectValue === "Auxiliar de limpeza") {
-    salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
-  } else if (selectValue === "Confeiteiro(a)") {
-    salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
-  } else if (selectValue === "Gerente") {
-    salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
-  } else if (selectValue === "Nutricionista") {
-    salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
-  } else if (selectValue === "Recepcionista"){
-    salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
-  }
+  useEffect(() => {
+    if (selectValue === "Auxiliar de limpeza") {
+      salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
+      setHabilidadesState(auxiliarlimpeza);
+      setDesmarcado(true)
+    } else if (selectValue === "Confeiteiro(a)") {
+      salarioValue = Number(salarioValue + salario[1].value).toFixed(2);setHabilidadesState(confeiteiro);
+      setDesmarcado(true)
+    } else if (selectValue === "Gerente") {
+      salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
+    } else if (selectValue === "Nutricionista") {
+      salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
+    } else if (selectValue === "Recepcionista") {
+      salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
+    }
+  }, [selectValue]);
 
   return (
     <div>
@@ -61,9 +70,10 @@ const ModalForm = () => {
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
         <S.CheckboxContainer activescroll>
-          {habilidades.map((elem) => {
+          {habilidadesState.map((elem) => {
             return (
               <InputCheckbox
+                desmarcado={desmarcado}
                 selectValue={selectValue}
                 category={elem.category}
                 atividades={elem.name}
