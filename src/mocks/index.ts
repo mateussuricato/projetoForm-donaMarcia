@@ -301,22 +301,22 @@ export const recepcionista = [
 
 export const tempoexperiencia = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "c92fea7c-455d-4c09-a796-65261ec80c98",
     name: "0 ano",
     categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "579fc056-76b2-4e11-8c3b-c7fd60262fbf",
     name: "1 ano",
     categoryCargo: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "e14622df-8dbd-4125-a909-3473e7079f53",
     name: "2 anos",
     categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "6946f707-108e-42b7-856f-6869c58ce74c",
     name: "3 anos ou +",
     categoryCargo: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
   },
@@ -324,17 +324,17 @@ export const tempoexperiencia = [
 
 export const experiencia = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "a1993e8a-ebe2-4525-8da4-2016df19467e",
     name: "Ensino médio",
     categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "39873288-98a1-4575-a1f7-7180965e396b",
     name: "Curso técnico",
     categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "24900b2a-938b-4d62-af8a-c919800b99d9",
     name: "Curso superior",
     categoryCargo: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
   },
@@ -342,42 +342,42 @@ export const experiencia = [
 
 export const etapas = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "bebb64fc-4308-4a62-85dd-705a5a2ca08a",
     name: "Início imediato",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "163f3633-f831-4e30-9a94-20a236cedcab",
     name: "Entrevista",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "74c5d3d0-d6a9-4e1c-84ec-5360ec5e9236",
     name: "Entrevista e teste técnico",
   },
 ];
 
 export const beneficios = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "75911967-e038-4279-9ac6-6f29e2261226",
     name: "Vale-alimentação",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "53359344-145a-4b1c-96a9-e5e3229cc869",
     name: "Vale-combustível",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "4c2ce7b6-641b-4c97-a23c-13c80287ab01",
     name: "Plano odontológico e de saúde",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "a4e87b14-eac3-4168-b02e-1ec45f21f18f",
     name: "Vale-cultura",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "9a052fb5-1f6c-4c66-8f30-4f2f3bbf4b9e",
     name: "Viagem de incentivo",
   },
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "831051d4-8653-4611-8486-f33539b75405",
     name: "VB Presente",
   },
 ];
