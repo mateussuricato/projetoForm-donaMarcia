@@ -253,6 +253,87 @@ export const gerente = [
   },
 ];
 
+export const nutricionista = [
+  {
+    id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
+    name: "Simpatia",
+    category: "",
+  },
+  {
+    id: "0e721942-4e73-474a-a873-bb027e5c873c",
+    name: "Organização",
+    category: "",
+  },
+  {
+    id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
+    name: "Trabalhar em equipe",
+    category: "",
+  },
+  {
+    id: "f24ff7e8-b95b-42d8-ac3c-73a3c875780a",
+    name: "Criatividade",
+    category: "",
+  },
+  {
+    id: "e67a2c6b-4e64-4af7-a4b5-5ff220d82498",
+    name: "Boa comunicação",
+    category: "",
+  },
+  {
+    id: "28d8fd48-824a-4a9d-8d5c-a3a9072e8eae",
+    name: "Manter-se atualizado",
+    category: "",
+  },
+  {
+    id: "1fe933ac-93d1-46e8-a044-a626d7299cb6",
+    name: "Boa memória",
+    category: "",
+  },
+  {
+    id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
+    name: "Ter sensibilidade para lidar com pessoas",
+    category: "",
+  },
+  {
+    id: "85d7471a-9ba2-4dd0-adc2-2d0f1dcdd613",
+    name: "Procurar (e dar) feedback",
+    category: "",
+  },
+];
+
+export const recepcionista = [
+  {
+    id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
+    name: "Simpatia",
+    category: "",
+  },
+  {
+    id: "0e721942-4e73-474a-a873-bb027e5c873c",
+    name: "Organização",
+    category: "",
+  },
+  {
+    id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
+    name: "Trabalhar em equipe",
+    category: "",
+  },
+  {
+    id: "e67a2c6b-4e64-4af7-a4b5-5ff220d82498",
+    name: "Boa comunicação",
+    category: "",
+  },
+  {
+    id: "1fe933ac-93d1-46e8-a044-a626d7299cb6",
+    name: "Boa memória",
+    category: "",
+  },
+  {
+    id: "5603611b-97d2-4783-812d-a760f745f905",
+    name: "Cordialidade",
+    category: "",
+  },
+];
+
 export const tempoexperiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
