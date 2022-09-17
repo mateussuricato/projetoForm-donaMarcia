@@ -8,7 +8,7 @@ export const FormOverlay = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 1700px;
+  height: 2000px;
   background-color: #fafafa;
   border-radius: 10px;
 

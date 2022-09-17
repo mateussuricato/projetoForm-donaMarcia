@@ -1,22 +1,22 @@
 export const cargos = [
   {
-    id: "265c2b49-564a-4a5a-a758-ef7263eb2e9e",
+    id: "bad47155-b140-40b3-ad7b-2207019dced8",
     name: "Auxiliar de limpeza",
   },
   {
-    id: "929344ab-734f-46a8-be1a-cf98c4c7b6e8",
+    id: "30120997-36cc-496a-9237-72c467e99924",
     name: "Confeiteiro(a)",
   },
   {
-    id: "af7eaa0f-ec1e-474f-8626-64e248d328ba",
+    id: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
     name: "Gerente",
   },
   {
-    id: "77e58c49-8c82-47d0-91b0-d46e625412e7",
+    id: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
     name: "Nutricionista",
   },
   {
-    id: "0fb67b87-0d71-433f-b063-568bb001558e",
+    id: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
     name: "Recepcionista",
   },
 ];
@@ -53,99 +53,98 @@ export const atividades = [
   {
     id: "848d5194-5472-4d52-9973-d32ec47c2b35",
     name: "Atendimento ao cliente",
-    category: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
+    categoryCargo: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
   },
   {
     id: "b7fc2e73-9a87-4364-ba49-a461b744f9d4",
     name: "Conservação do ambiente",
-    category: "bad47155-b140-40b3-ad7b-2207019dced8",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "aa68cc7c-3680-4ea4-bb5a-8d60a5e0c346",
     name: "Atender telefone",
-    category: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
+    categoryCargo: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
   },
   {
     id: "75df7d99-293f-45c9-a59f-a488165cacac",
     name: "Limpeza dos ambientes",
-    category: "bad47155-b140-40b3-ad7b-2207019dced8",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "0b5e139d-76bb-43db-8caf-03b5149f5bc0",
     name: "Preparar e criar receitas",
-    category: "30120997-36cc-496a-9237-72c467e99924",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "ebd05c86-f5be-4f7e-b1d0-8ecb15eaed00",
     name: "Fazer bolos",
-    category: "30120997-36cc-496a-9237-72c467e99924",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "292a045a-eab8-4012-87a2-f2aec7c2cc38",
     name: "Fazer doces",
-    category: "30120997-36cc-496a-9237-72c467e99924",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "4cbc60d7-7a5e-4fd3-82ce-1cdd57698a48",
     name: "Planejamento",
-    category: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
+    categoryCargo: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
   },
   {
     id: "e4ea97ce-7726-494e-8f52-cbad8a5f6872",
     name: "Anotar pedidos",
-    category: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
+    categoryCargo: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
   },
   {
     id: "757e1e21-8fd8-45b0-86b1-abca6632bada",
     name: "Organização",
-    category: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
+    categoryCargo: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
   },
   {
     id: "1072d4d6-fbd6-442c-aeab-f3ad5e1f3605",
     name: "Fazer tortas",
-    category: "30120997-36cc-496a-9237-72c467e99924",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "565a5f8a-ac24-4ff3-9f03-7a58de81018f",
     name: "Controle",
-    category: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
+    categoryCargo: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
   },
   {
     id: "ba988c6a-cd8b-4f54-89a8-febf7eb9bf79",
     name: "Conferir qualidade dos alimentos",
-    category: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
+    categoryCargo: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
   },
   {
     id: "46cc2029-f71e-4d34-a2e9-323d66eb5d87",
     name: "Fazer salgados",
-    category: "30120997-36cc-496a-9237-72c467e99924",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "32bbff64-1a84-468c-83cb-2d821a3b40c5",
     name: "Controle de valor nutricional",
-    category: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
+    categoryCargo: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
   },
   {
     id: "ec1a6277-29ff-4979-9fc5-2d74e57eba36",
     name: "Coletar lixo",
-    category: "bad47155-b140-40b3-ad7b-2207019dced8",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "5463bc6c-b8e1-477a-8e8c-143eedacdbb3",
     name: "Definição de estratégias",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryCargo: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
   },
   {
     id: "75aadb0b-7cc9-4ab2-b422-b9d4ffe86dee",
     name: "Planejamento de cardápios",
-    category: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
+    categoryCargo: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
   },
 ];
 
 export const habilidades = [
   {
     name: "",
-    category: "",
   },
 ];
 
@@ -153,22 +152,18 @@ export const auxiliarlimpeza = [
   {
     id: "62cfb9d1-7e1a-46ad-a5a8-e295e6d23f94",
     name: "Higiene",
-    category: "",
   },
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
     name: "Agilidade",
-    category: "",
   },
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
     name: "Simpatia",
-    category: "",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
     name: "Organização",
-    category: "",
   },
 ];
 
@@ -176,37 +171,30 @@ export const confeiteiro = [
   {
     id: "3e28fb69-eb86-4428-89a5-b7e22103a441",
     name: "Preparar e criar receitas",
-    category: "",
   },
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
     name: "Agilidade",
-    category: "",
   },
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
     name: "Simpatia",
-    category: "",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
     name: "Organização",
-    category: "",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
     name: "Trabalhar em equipe",
-    category: "",
   },
   {
     id: "42b747a7-7717-4918-9044-59fd1abebc35",
     name: "Senso artístico",
-    category: "",
   },
   {
     id: "42b747a7-7717-4918-9044-59fd1abebc35",
     name: "Pensamento crítico",
-    category: "",
   },
 ];
 
@@ -214,42 +202,34 @@ export const gerente = [
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
     name: "Agilidade",
-    category: "",
   },
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
     name: "Simpatia",
-    category: "",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
     name: "Organização",
-    category: "",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
     name: "Trabalhar em equipe",
-    category: "",
   },
   {
     id: "63c5acae-75f0-4e20-9b98-429446f5d7a2",
     name: "Capacidade de tomar decisões",
-    category: "",
   },
   {
     id: "85d7471a-9ba2-4dd0-adc2-2d0f1dcdd613",
     name: "Procurar (e dar) feedback",
-    category: "",
   },
   {
     id: "eff04af7-879b-4296-bb6d-ca312b43dd46",
     name: "Ter ética pessoal e profissional",
-    category: "",
   },
   {
     id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
     name: "Ter sensibilidade para lidar com pessoas",
-    category: "",
   },
 ];
 
@@ -257,47 +237,38 @@ export const nutricionista = [
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
     name: "Simpatia",
-    category: "",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
     name: "Organização",
-    category: "",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
     name: "Trabalhar em equipe",
-    category: "",
   },
   {
     id: "f24ff7e8-b95b-42d8-ac3c-73a3c875780a",
     name: "Criatividade",
-    category: "",
   },
   {
     id: "e67a2c6b-4e64-4af7-a4b5-5ff220d82498",
     name: "Boa comunicação",
-    category: "",
   },
   {
     id: "28d8fd48-824a-4a9d-8d5c-a3a9072e8eae",
     name: "Manter-se atualizado",
-    category: "",
   },
   {
     id: "1fe933ac-93d1-46e8-a044-a626d7299cb6",
     name: "Boa memória",
-    category: "",
   },
   {
     id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
     name: "Ter sensibilidade para lidar com pessoas",
-    category: "",
   },
   {
     id: "85d7471a-9ba2-4dd0-adc2-2d0f1dcdd613",
     name: "Procurar (e dar) feedback",
-    category: "",
   },
 ];
 
@@ -305,32 +276,26 @@ export const recepcionista = [
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
     name: "Simpatia",
-    category: "",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
     name: "Organização",
-    category: "",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
     name: "Trabalhar em equipe",
-    category: "",
   },
   {
     id: "e67a2c6b-4e64-4af7-a4b5-5ff220d82498",
     name: "Boa comunicação",
-    category: "",
   },
   {
     id: "1fe933ac-93d1-46e8-a044-a626d7299cb6",
     name: "Boa memória",
-    category: "",
   },
   {
     id: "5603611b-97d2-4783-812d-a760f745f905",
     name: "Cordialidade",
-    category: "",
   },
 ];
 
@@ -338,22 +303,22 @@ export const tempoexperiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "0 ano",
-    category: "Balconista",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "1 ano",
-    category: "Balconista",
+    categoryCargo: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "2 anos",
-    category: "Balconista",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "3 anos ou +",
-    category: "Balconista",
+    categoryCargo: "833b81f0-bf9b-44ac-b4ac-de4a99958b0c",
   },
 ];
 
@@ -361,17 +326,17 @@ export const experiencia = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Ensino médio",
-    category: "Balconista",
+    categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Curso técnico",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryCargo: "30120997-36cc-496a-9237-72c467e99924",
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Curso superior",
-    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+    categoryCargo: "1b9201d9-9ec9-4c81-8d19-987abc67ecc6",
   },
 ];
 
@@ -387,5 +352,32 @@ export const etapas = [
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
     name: "Entrevista e teste técnico",
+  },
+];
+
+export const beneficios = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Vale-alimentação",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Vale-combustível",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Plano odontológico e de saúde",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Vale-cultura",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Viagem de incentivo",
+  },
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "VB Presente",
   },
 ];

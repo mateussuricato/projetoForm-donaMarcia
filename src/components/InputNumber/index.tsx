@@ -4,12 +4,10 @@ import * as S from "./styles";
 interface InputProps {
   placeholder?: string
   img?: string
-  value?: string
   salario?: any
-  mudar?: any
 }
 
-const InputNumber = ({placeholder, img, value, salario, mudar}: InputProps) => {
+const InputNumber = ({placeholder, img, salario}: InputProps) => {
 
 
   return (

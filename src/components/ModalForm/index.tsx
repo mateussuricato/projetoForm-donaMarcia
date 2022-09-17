@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import InputCheckbox from "../InputCheckbox";
-import InputText from "../InputNumber";
+import InputNumber from "../InputNumber";
 import Select from "../Select";
 import * as S from "./styles";
 import {
@@ -13,20 +13,32 @@ import {
   confeiteiro,
   gerente,
   nutricionista,
-  recepcionista
+  recepcionista,
+  beneficios
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
-  const [habilidadesState, setHabilidadesState] = useState(habilidades);
+  const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
   const [desmarcado, setDesmarcado] = useState(false);
 
   let salarioValue = "";
 
+  if (selectValue === "Auxiliar de limpeza") {
+    salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
+  } else if (selectValue === "Confeiteiro(a)") {
+    salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
+  } else if (selectValue === "Gerente") {
+    salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
+  } else if (selectValue === "Nutricionista") {
+    salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
+  } else if (selectValue === "Recepcionista") {
+    salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
+  }
+
   useEffect(() => {
     if (selectValue === "Auxiliar de limpeza") {
-      salarioValue = Number(salarioValue + salario[0].value).toFixed(2);
       setHabilidadesState(auxiliarlimpeza);
       setDesmarcado(true);
     } else if (selectValue === "Confeiteiro(a)") {
@@ -58,12 +70,11 @@ const ModalForm = () => {
             selectValue={selectValue}
             setSelectValue={setSelectValue}
           ></Select>
-          <InputText
+          <InputNumber
             salario={salarioValue}
-            value={"1.000,00"}
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
-          ></InputText>
+          ></InputNumber>
           <SelectEtapas img={"https://i.imgur.com/LNAjnQH.png"}></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
@@ -72,7 +83,7 @@ const ModalForm = () => {
             return (
               <InputCheckbox
                 selectValue={selectValue}
-                category={elem.category}
+                category={elem.categoryCargo}
                 atividades={elem.name}
               />
             );
@@ -80,13 +91,12 @@ const ModalForm = () => {
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
         <S.CheckboxContainer>
-          {habilidadesState.map((elem) => {
+          {habilidadesState.map((elem: { name: string | undefined; }) => {
             return (
               <InputCheckbox
                 habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
                 selectValue={selectValue}
-                category={elem.category}
                 atividades={elem.name}
               />
             );
@@ -100,7 +110,7 @@ const ModalForm = () => {
               return (
                 <InputCheckbox
                   selectValue={selectValue}
-                  category={elem.category}
+                  category={elem.categoryCargo}
                   atividades={elem.name}
                 />
               );
@@ -112,12 +122,23 @@ const ModalForm = () => {
               return (
                 <InputCheckbox
                   selectValue={selectValue}
-                  category={elem.category}
+                  category={elem.categoryCargo}
                   atividades={elem.name}
                 />
               );
             })}
           </div>
+        </S.CheckboxContainer>
+        <S.Titulo>Benefícios do cargo</S.Titulo>
+        <S.CheckboxContainer>
+          {beneficios.map((elem) => {
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                atividades={elem.name}
+              />
+            );
+          })}
         </S.CheckboxContainer>
       </S.FormOverlay>
     </div>
