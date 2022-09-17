@@ -144,9 +144,10 @@ export const atividades = [
 
 export const habilidades = [
   {
-    id: "09093985-fc80-4781-9f44-63be246689a6",
+    id: "09093985-fc80-4781-9f44-63be246689a0",
     name: "Boa comunicação",
-    category: "Balconista",
+    category: "494ea8c2-743d-43d4-ab60-159bd93cb80e",
+    cargosId: ""
   },
   {
     id: "09093985-fc80-4781-9f44-63be246689a6",
@@ -194,6 +195,22 @@ export const habilidades = [
     category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
   },
 ];
+
+export const auxiliarlimpeza = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Higiene",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+]
+
+export const confeiteiro = [
+  {
+    id: "09093985-fc80-4781-9f44-63be246689a6",
+    name: "Preparar e criar receitas",
+    category: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
+  },
+]
 
 export const tempoexperiencia = [
   {

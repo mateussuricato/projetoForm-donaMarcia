@@ -3,11 +3,12 @@ import * as S from "./styles";
 
 interface InputPros {
   atividades?: string;
-  category?: string | number;
+  category?: string[] | string;
   selectValue?: any;
+  desmarcado?: any
 }
 
-const InputCheckbox = ({ atividades, category, selectValue }: InputPros) => {
+const InputCheckbox = ({ atividades, category, selectValue, desmarcado }: InputPros) => {
   if (
     category === "bad47155-b140-40b3-ad7b-2207019dced8" &&
     selectValue === "Auxiliar de limpeza"
@@ -49,8 +50,8 @@ const InputCheckbox = ({ atividades, category, selectValue }: InputPros) => {
       </S.RadioOverlay>
     );
   } else if (
-    category === "494ea8c2-743d-43d4-ab60-159bd93cb80e" &&
-    selectValue === "Recepcionista"
+    selectValue === "Recepcionista" &&
+    category === "494ea8c2-743d-43d4-ab60-159bd93cb80e"
   ) {
     return (
       <S.RadioOverlay>
@@ -62,7 +63,7 @@ const InputCheckbox = ({ atividades, category, selectValue }: InputPros) => {
     return (
       <div>
         <S.RadioOverlay>
-          <input type="checkbox" />
+          {desmarcado ? <input defaultChecked type="checkbox" /> :<input type="checkbox" />}
           <span>{atividades}</span>
         </S.RadioOverlay>
       </div>
