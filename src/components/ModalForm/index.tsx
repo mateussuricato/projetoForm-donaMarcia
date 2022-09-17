@@ -11,6 +11,7 @@ import {
   tempoexperiencia,
   auxiliarlimpeza,
   confeiteiro,
+  gerente
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
@@ -32,6 +33,8 @@ const ModalForm = () => {
       setDesmarcado(true);
     } else if (selectValue === "Gerente") {
       salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
+      setHabilidadesState(gerente);
+      setDesmarcado(true);
     } else if (selectValue === "Nutricionista") {
       salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
     } else if (selectValue === "Recepcionista") {

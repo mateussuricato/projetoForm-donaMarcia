@@ -157,7 +157,7 @@ export const auxiliarlimpeza = [
   },
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
-    name: "Agilidade e organização",
+    name: "Agilidade",
     category: "",
   },
   {
@@ -180,7 +180,7 @@ export const confeiteiro = [
   },
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
-    name: "Agilidade e organização",
+    name: "Agilidade",
     category: "",
   },
   {
@@ -206,6 +206,49 @@ export const confeiteiro = [
   {
     id: "42b747a7-7717-4918-9044-59fd1abebc35",
     name: "Pensamento crítico",
+    category: "",
+  },
+];
+
+export const gerente = [
+  {
+    id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
+    name: "Agilidade",
+    category: "",
+  },
+  {
+    id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
+    name: "Simpatia",
+    category: "",
+  },
+  {
+    id: "0e721942-4e73-474a-a873-bb027e5c873c",
+    name: "Organização",
+    category: "",
+  },
+  {
+    id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
+    name: "Trabalhar em equipe",
+    category: "",
+  },
+  {
+    id: "63c5acae-75f0-4e20-9b98-429446f5d7a2",
+    name: "Capacidade de tomar decisões",
+    category: "",
+  },
+  {
+    id: "85d7471a-9ba2-4dd0-adc2-2d0f1dcdd613",
+    name: "Procurar (e dar) feedback",
+    category: "",
+  },
+  {
+    id: "eff04af7-879b-4296-bb6d-ca312b43dd46",
+    name: "Ter ética pessoal e profissional",
+    category: "",
+  },
+  {
+    id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
+    name: "Ter sensibilidade para lidar com pessoas",
     category: "",
   },
 ];
