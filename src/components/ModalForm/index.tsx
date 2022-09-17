@@ -14,12 +14,13 @@ import {
   gerente,
   nutricionista,
   recepcionista,
+  beneficios
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
   const [selectValue, setSelectValue] = useState("Selecione o cargo...");
-  const [habilidadesState, setHabilidadesState] = useState(habilidades);
+  const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
   const [desmarcado, setDesmarcado] = useState(false);
 
   let salarioValue = "";
@@ -90,13 +91,12 @@ const ModalForm = () => {
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
         <S.CheckboxContainer>
-          {habilidadesState.map((elem) => {
+          {habilidadesState.map((elem: { name: string | undefined; }) => {
             return (
               <InputCheckbox
                 habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
                 selectValue={selectValue}
-                category={elem.categoryCargo}
                 atividades={elem.name}
               />
             );
@@ -128,6 +128,17 @@ const ModalForm = () => {
               );
             })}
           </div>
+        </S.CheckboxContainer>
+        <S.Titulo>Benefícios do cargo</S.Titulo>
+        <S.CheckboxContainer activescroll>
+          {beneficios.map((elem) => {
+            return (
+              <InputCheckbox
+                selectValue={selectValue}
+                atividades={elem.name}
+              />
+            );
+          })}
         </S.CheckboxContainer>
       </S.FormOverlay>
     </div>
