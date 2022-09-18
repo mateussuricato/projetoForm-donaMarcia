@@ -10,6 +10,8 @@ interface InputPros {
   habilidadesState?: any;
   name?: string | undefined;
   inputName?: string
+  onChange?: any
+  verificar: any
 }
 
 const InputCheckbox = ({
@@ -19,7 +21,9 @@ const InputCheckbox = ({
   desmarcado,
   habilidadesState,
   name,
-  inputName
+  inputName,
+  onChange,
+  verificar
 }: InputPros) => {
   if (habilidadesState == habilidades) {
     return (
@@ -33,7 +37,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input name={inputName} value={name} defaultChecked type="checkbox" />
+        <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -43,7 +47,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input name={inputName} value={name} defaultChecked type="checkbox" />
+        <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -53,7 +57,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input name={inputName} value={name} defaultChecked type="checkbox" />
+        <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -63,7 +67,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input name={inputName} value={name} defaultChecked type="checkbox" />
+        <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -73,7 +77,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input name={inputName} value={name} defaultChecked type="checkbox" />
+        <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -82,9 +86,9 @@ const InputCheckbox = ({
       <div>
         <S.RadioOverlay>
           {desmarcado ? (
-            <input name={inputName} value={name} defaultChecked type="checkbox" />
+            <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} defaultChecked type="checkbox" />
           ) : (
-            <input name={inputName} value={name} type="checkbox" />
+            <input onChangeCapture={verificar} onChange={onChange} name={inputName} value={name} type="checkbox" />
           )}
           <span>{atividades}</span>
         </S.RadioOverlay>

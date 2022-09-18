@@ -7,18 +7,19 @@ interface SelectProps {
   setSalario?: any;
   selectValue?: any;
   setSelectValue?: any;
+  onChange?: any
 }
 
-const Select = ({ img, selectValue, setSelectValue }: SelectProps) => {
+const Select = ({ img, selectValue , onChange }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
       <S.Select
+        onChangeCapture={onChange}
         name="etapas"
         value={selectValue}
-        onChange={(e) => setSelectValue(e.target.value)}
       >
-        <option selected disabled>
+        <option disabled>
           Etapas do processo
         </option>
         {etapas.map((elem) => {

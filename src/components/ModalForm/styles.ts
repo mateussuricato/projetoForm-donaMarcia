@@ -35,14 +35,13 @@ export const CheckboxContainer = styled.div`
   background-color: #fafafa;
   gap: 30px;
   padding: 10px 50px;
-  height: 350px;
   margin: 0;
 
   ${({activescroll}: ScrollProps) =>
     activescroll &&
     css`
       overflow-y: scroll;
-      min-height: 350px;
+      max-height: 350px;
     `}
 
     h3 {
@@ -56,6 +55,10 @@ export const CheckboxContainer = styled.div`
       gap: 30px;
       background-color: #fafafa;
     }
+
+    p {
+      margin: 0 auto;
+    }
 `;
 
 export const Titulo = styled.h1`
@@ -63,5 +66,13 @@ export const Titulo = styled.h1`
   background-color: #fafafa;
   margin: 0;
   text-align: center;
-  padding: 40px 40px 40px 40px;
+  padding: 20px;
+`;
+
+export const Paragrafo = styled.p`
+max-width: 920px;
+background-color: #fafafa;
+margin: 0;
+text-align: center;
+padding: 40px 40px 40px 40px;
 `;

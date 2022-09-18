@@ -6,6 +6,7 @@ import * as S from "./styles";
 import {
   salario,
   atividades,
+  atividades2,
   habilidades,
   experiencia,
   tempoexperiencia,
@@ -17,11 +18,70 @@ import {
   beneficios,
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
+import axios from "axios";
 
 const ModalForm = () => {
-  const [selectValue, setSelectValue] = useState("");
+  const [selectValue, setSelectValue] = useState<any>("");
   const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
   const [desmarcado, setDesmarcado] = useState(false);
+  const [checkedAtividades, setCheckedAtividades] = useState<any>([]);
+
+
+ const checkedItems = checkedAtividades.length
+? checkedAtividades.reduce((total: string, item: string) => {
+    return total + ", " + item;
+  })
+: "";
+
+const handleCheckAtividades = (event: { target: { checked: any; value: any; }; }) => {
+  var updatedList = [...checkedAtividades];
+  if (event.target.checked) {
+    updatedList = [...checkedAtividades, event.target.value];
+  } else {
+    updatedList.splice(checkedAtividades.indexOf(event.target.value), 1);
+  }
+  setCheckedAtividades(updatedList);
+};
+
+const [checkedHablidades, setCheckedHabilidades] = useState<any>([]);
+
+
+const checkedHabilidades= checkedHablidades.length
+? checkedHablidades.reduce((total: string, item: string) => {
+   return total + ", " + item;
+ })
+: "";
+
+const handleCheckHabilidades = (event: { target: { checked: any; value: any; }; }) => {
+ var updatedList = [...checkedHablidades];
+ if (event.target.checked) {
+   updatedList = [...checkedHablidades, event.target.value];
+ } else {
+   updatedList.splice(checkedHablidades.indexOf(event.target.value), 1);
+ }
+ setCheckedHabilidades(updatedList);
+};
+
+  const initialValue = {
+    cargo: "",
+    salariodocargo: "",
+    etapas: "",
+    atividadesdocargo: "",
+    habilidadesdocargo: "",
+    tempoexperiencia: "",
+    grauexperiencia: "",
+    beneficioscargo: "",
+  };
+
+  const [values, setValues] = useState(initialValue);
+
+  console.log(values);
+
+  function onChange(ev: { target: { name: any; value: any } }) {
+    const { name, value } = ev.target;
+
+    setValues({ ...values, [name]: value });
+  }
 
   let salarioValue = "";
 
@@ -60,41 +120,62 @@ const ModalForm = () => {
     }
   }, [selectValue]);
 
+  function onSubmit(ev: any) {
+    axios.post("http://localhost:5000/cargos", values).then((res) => {
+      console.log("Deu certo");
+    });
+  }
+
+
+
+
   return (
     <div>
-      <S.FormOverlay>
+      <S.FormOverlay onSubmit={onSubmit}>
         <img className="logo" src="https://i.imgur.com/tQrHHbf.png" alt="" />
         <S.InputContainer>
           <Select
+            onChange={onChange}
             img={"https://i.imgur.com/LNAjnQH.png"}
             setSelectValue={setSelectValue}
           ></Select>
           <InputNumber
+            onChange={onChange}
             salario={salarioValue}
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
           ></InputNumber>
-          <SelectEtapas img={"https://i.imgur.com/LNAjnQH.png"}></SelectEtapas>
+          <SelectEtapas
+            onChange={onChange}
+            img={"https://i.imgur.com/LNAjnQH.png"}
+          ></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
+        <S.Paragrafo>{`Atividades selecionadas: ${checkedItems}`}</S.Paragrafo>
         <S.CheckboxContainer activescroll>
-          {atividades.map((elem) => {
+          {atividades2.map((elem, index) => {
             return (
               <InputCheckbox
+                name={elem}
+                key={index}
+                atividades={elem}
+                verificar={onChange}
+                onChange={handleCheckAtividades}
                 inputName={"atividadesdocargo"}
-                name={elem.name}
                 selectValue={selectValue}
-                category={elem.categoryCargo}
-                atividades={elem.name}
               />
             );
           })}
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
+        <S.Paragrafo>{`Habilidades selecionadas: ${checkedHabilidades}`}</S.Paragrafo>
         <S.CheckboxContainer>
           {habilidadesState.map((elem: { name: string | undefined }) => {
             return (
               <InputCheckbox
+                key={elem.name}
+                onChange={handleCheckHabilidades}
+                verificar={onChange}
                 inputName={"habilidadesdocargo"}
                 name={elem.name}
                 habilidadesState={habilidadesState}
@@ -112,6 +193,9 @@ const ModalForm = () => {
             {tempoexperiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  key={elem.name}
+                  onChange={handleCheckAtividades}
+                  verificar={onChange}
                   inputName={"tempoexperiencia"}
                   name={elem.name}
                   selectValue={selectValue}
@@ -126,6 +210,9 @@ const ModalForm = () => {
             {experiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  key={elem.name}
+                  verificar={onChange}
+                  onChange={handleCheckAtividades}
                   inputName={"grauexperiencia"}
                   name={elem.name}
                   selectValue={selectValue}
@@ -141,6 +228,9 @@ const ModalForm = () => {
           {beneficios.map((elem) => {
             return (
               <InputCheckbox
+                key={elem.name}
+                onChange={handleCheckAtividades}
+                verificar={onChange}
                 name={elem.name}
                 inputName={"beneficioscargo"}
                 selectValue={selectValue}
