@@ -19,7 +19,7 @@ import {
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
-  const [selectValue, setSelectValue] = useState("Selecione o cargo...");
+  const [selectValue, setSelectValue] = useState("");
   const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
   const [desmarcado, setDesmarcado] = useState(false);
 
@@ -67,7 +67,6 @@ const ModalForm = () => {
         <S.InputContainer>
           <Select
             img={"https://i.imgur.com/LNAjnQH.png"}
-            selectValue={selectValue}
             setSelectValue={setSelectValue}
           ></Select>
           <InputNumber
@@ -82,6 +81,7 @@ const ModalForm = () => {
           {atividades.map((elem) => {
             return (
               <InputCheckbox
+                inputName={"atividadesdocargo"}
                 name={elem.name}
                 selectValue={selectValue}
                 category={elem.categoryCargo}
@@ -95,6 +95,7 @@ const ModalForm = () => {
           {habilidadesState.map((elem: { name: string | undefined }) => {
             return (
               <InputCheckbox
+                inputName={"habilidadesdocargo"}
                 name={elem.name}
                 habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
@@ -111,6 +112,7 @@ const ModalForm = () => {
             {tempoexperiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  inputName={"tempoexperiencia"}
                   name={elem.name}
                   selectValue={selectValue}
                   category={elem.categoryCargo}
@@ -124,6 +126,7 @@ const ModalForm = () => {
             {experiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  inputName={"grauexperiencia"}
                   name={elem.name}
                   selectValue={selectValue}
                   category={elem.categoryCargo}
@@ -137,10 +140,16 @@ const ModalForm = () => {
         <S.CheckboxContainer>
           {beneficios.map((elem) => {
             return (
-              <InputCheckbox selectValue={selectValue} atividades={elem.name} />
+              <InputCheckbox
+                name={elem.name}
+                inputName={"beneficioscargo"}
+                selectValue={selectValue}
+                atividades={elem.name}
+              />
             );
           })}
         </S.CheckboxContainer>
+        <button type="submit">VAMOS TESTAR</button>
       </S.FormOverlay>
     </div>
   );

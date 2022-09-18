@@ -9,6 +9,7 @@ interface InputPros {
   desmarcado?: any;
   habilidadesState?: any;
   name?: string | undefined;
+  inputName?: string
 }
 
 const InputCheckbox = ({
@@ -18,6 +19,7 @@ const InputCheckbox = ({
   desmarcado,
   habilidadesState,
   name,
+  inputName
 }: InputPros) => {
   if (habilidadesState == habilidades) {
     return (
@@ -31,7 +33,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input value={name} defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -41,7 +43,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input value={name} defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -51,7 +53,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input value={name} defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -61,7 +63,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input value={name} defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -71,7 +73,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input value={name} defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -80,9 +82,9 @@ const InputCheckbox = ({
       <div>
         <S.RadioOverlay>
           {desmarcado ? (
-            <input value={name} defaultChecked type="checkbox" />
+            <input name={inputName} value={name} defaultChecked type="checkbox" />
           ) : (
-            <input value={name} type="checkbox" />
+            <input name={inputName} value={name} type="checkbox" />
           )}
           <span>{atividades}</span>
         </S.RadioOverlay>

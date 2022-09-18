@@ -14,7 +14,7 @@ const InputNumber = ({placeholder, img, salario}: InputProps) => {
     <S.InputOverlay>
       <img src={img} alt="" />
       <p>R$</p>
-      <S.Input type="number" placeholder={placeholder} defaultValue={`${salario}`}></S.Input>
+      <S.Input name="salariodocargo" type="number" placeholder={placeholder} defaultValue={`${salario}`}></S.Input>
     </S.InputOverlay>
   )
 }
