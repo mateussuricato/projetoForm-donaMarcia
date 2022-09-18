@@ -14,7 +14,7 @@ const Select = ({ img, selectValue, setSelectValue, }: SelectProps) => {
     <S.SelectOverlay>
       <img src={img} alt="" />
       <S.Select value={selectValue} onChange={e => setSelectValue(e.target.value)}>
-        <option selected disabled>
+        <option value="" selected disabled>
           {selectValue}
         </option>
         {cargos.map((elem: any) => {
