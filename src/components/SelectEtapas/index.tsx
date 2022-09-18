@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { cargos } from "../../mocks";
+import { etapas } from "../../mocks";
 
 interface SelectProps {
   img?: string;
@@ -10,20 +10,19 @@ interface SelectProps {
   onChange?: any
 }
 
-const Select = ({ img, selectValue, setSelectValue, onChange }: SelectProps) => {
+const Select = ({ img, selectValue , onChange }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
       <S.Select
-        name="cargo"
-        value={selectValue}
         onChangeCapture={onChange}
-        onChange={(e) => setSelectValue(e.target.value)}
+        name="etapas"
+        value={selectValue}
       >
-        <option selected disabled>
-        Selecione o cargo...
+        <option disabled>
+          Etapas do processo
         </option>
-        {cargos.map((elem: any) => {
+        {etapas.map((elem) => {
           return (
             <option key={elem.id} value={elem.name}>
               {elem.name}
