@@ -121,7 +121,7 @@ const handleCheckHabilidades = (event: { target: { checked: any; value: any; }; 
   }, [selectValue]);
 
   function onSubmit(ev: any) {
-    axios.post("http://localhost:5000/cargos", values).then((res) => {
+    axios.post("http://localhost:3004/create", values).then((res) => {
       console.log("Deu certo");
     });
   }
