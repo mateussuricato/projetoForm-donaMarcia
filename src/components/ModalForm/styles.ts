@@ -4,7 +4,7 @@ interface ScrollProps {
   activescroll?: boolean
 }
 
-export const FormOverlay = styled.div`
+export const FormOverlay = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -35,13 +35,14 @@ export const CheckboxContainer = styled.div`
   background-color: #fafafa;
   gap: 30px;
   padding: 10px 50px;
-  max-height: 230px;
+  height: 350px;
   margin: 0;
 
   ${({activescroll}: ScrollProps) =>
     activescroll &&
     css`
       overflow-y: scroll;
+      min-height: 350px;
     `}
 
     h3 {

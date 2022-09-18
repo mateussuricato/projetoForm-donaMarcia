@@ -14,6 +14,7 @@ const Select = ({ img, selectValue, setSelectValue }: SelectProps) => {
     <S.SelectOverlay>
       <img src={img} alt="" />
       <S.Select
+        name="etapas"
         value={selectValue}
         onChange={(e) => setSelectValue(e.target.value)}
       >

@@ -14,12 +14,12 @@ import {
   gerente,
   nutricionista,
   recepcionista,
-  beneficios
+  beneficios,
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
 const ModalForm = () => {
-  const [selectValue, setSelectValue] = useState("Selecione o cargo...");
+  const [selectValue, setSelectValue] = useState("");
   const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
   const [desmarcado, setDesmarcado] = useState(false);
 
@@ -67,7 +67,6 @@ const ModalForm = () => {
         <S.InputContainer>
           <Select
             img={"https://i.imgur.com/LNAjnQH.png"}
-            selectValue={selectValue}
             setSelectValue={setSelectValue}
           ></Select>
           <InputNumber
@@ -82,6 +81,8 @@ const ModalForm = () => {
           {atividades.map((elem) => {
             return (
               <InputCheckbox
+                inputName={"atividadesdocargo"}
+                name={elem.name}
                 selectValue={selectValue}
                 category={elem.categoryCargo}
                 atividades={elem.name}
@@ -91,9 +92,11 @@ const ModalForm = () => {
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
         <S.CheckboxContainer>
-          {habilidadesState.map((elem: { name: string | undefined; }) => {
+          {habilidadesState.map((elem: { name: string | undefined }) => {
             return (
               <InputCheckbox
+                inputName={"habilidadesdocargo"}
+                name={elem.name}
                 habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
                 selectValue={selectValue}
@@ -109,6 +112,8 @@ const ModalForm = () => {
             {tempoexperiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  inputName={"tempoexperiencia"}
+                  name={elem.name}
                   selectValue={selectValue}
                   category={elem.categoryCargo}
                   atividades={elem.name}
@@ -121,6 +126,8 @@ const ModalForm = () => {
             {experiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  inputName={"grauexperiencia"}
+                  name={elem.name}
                   selectValue={selectValue}
                   category={elem.categoryCargo}
                   atividades={elem.name}
@@ -134,12 +141,15 @@ const ModalForm = () => {
           {beneficios.map((elem) => {
             return (
               <InputCheckbox
+                name={elem.name}
+                inputName={"beneficioscargo"}
                 selectValue={selectValue}
                 atividades={elem.name}
               />
             );
           })}
         </S.CheckboxContainer>
+        <button type="submit">VAMOS TESTAR</button>
       </S.FormOverlay>
     </div>
   );

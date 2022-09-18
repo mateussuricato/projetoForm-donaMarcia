@@ -8,6 +8,8 @@ interface InputPros {
   selectValue?: any;
   desmarcado?: any;
   habilidadesState?: any;
+  name?: string | undefined;
+  inputName?: string
 }
 
 const InputCheckbox = ({
@@ -15,20 +17,23 @@ const InputCheckbox = ({
   category,
   selectValue,
   desmarcado,
-  habilidadesState
+  habilidadesState,
+  name,
+  inputName
 }: InputPros) => {
-
-  if(habilidadesState == habilidades) {
-   return (
-    <S.Aviso>Selecione um cargo para as respectivas habilidades aparecerem  *</S.Aviso>
-   )
+  if (habilidadesState == habilidades) {
+    return (
+      <S.Aviso>
+        Selecione um cargo para as respectivas habilidades aparecerem *
+      </S.Aviso>
+    );
   } else if (
     category === "bad47155-b140-40b3-ad7b-2207019dced8" &&
     selectValue === "Auxiliar de limpeza"
   ) {
     return (
       <S.RadioOverlay>
-        <input defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -38,7 +43,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -48,7 +53,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -58,7 +63,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -68,7 +73,7 @@ const InputCheckbox = ({
   ) {
     return (
       <S.RadioOverlay>
-        <input defaultChecked type="checkbox" />
+        <input name={inputName} value={name} defaultChecked type="checkbox" />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
@@ -77,9 +82,9 @@ const InputCheckbox = ({
       <div>
         <S.RadioOverlay>
           {desmarcado ? (
-            <input defaultChecked type="checkbox" />
+            <input name={inputName} value={name} defaultChecked type="checkbox" />
           ) : (
-            <input type="checkbox" />
+            <input name={inputName} value={name} type="checkbox" />
           )}
           <span>{atividades}</span>
         </S.RadioOverlay>
