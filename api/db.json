@@ -1,0 +1,20 @@
+{
+  "cargos": [
+    {
+      "id": 1,
+      "cargo": "",
+      "salariodocargo": "",
+      "etapas": "",
+      "atividadesdocargo": "",
+      "habilidadesdocargo": "",
+      "tempoexperiencia": "",
+      "grauexperiencia": "",
+      "beneficioscargo": ""
+    }
+  ],
+  "atividades": {
+    "id": 1,
+    "atividade": "",
+    "cargosId": 1
+  }
+}
