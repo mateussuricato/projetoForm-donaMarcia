@@ -14,7 +14,7 @@ import {
   gerente,
   nutricionista,
   recepcionista,
-  beneficios
+  beneficios,
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
 
@@ -82,6 +82,7 @@ const ModalForm = () => {
           {atividades.map((elem) => {
             return (
               <InputCheckbox
+                name={elem.name}
                 selectValue={selectValue}
                 category={elem.categoryCargo}
                 atividades={elem.name}
@@ -91,9 +92,10 @@ const ModalForm = () => {
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
         <S.CheckboxContainer>
-          {habilidadesState.map((elem: { name: string | undefined; }) => {
+          {habilidadesState.map((elem: { name: string | undefined }) => {
             return (
               <InputCheckbox
+                name={elem.name}
                 habilidadesState={habilidadesState}
                 desmarcado={desmarcado}
                 selectValue={selectValue}
@@ -109,6 +111,7 @@ const ModalForm = () => {
             {tempoexperiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  name={elem.name}
                   selectValue={selectValue}
                   category={elem.categoryCargo}
                   atividades={elem.name}
@@ -121,6 +124,7 @@ const ModalForm = () => {
             {experiencia.map((elem) => {
               return (
                 <InputCheckbox
+                  name={elem.name}
                   selectValue={selectValue}
                   category={elem.categoryCargo}
                   atividades={elem.name}
@@ -133,10 +137,7 @@ const ModalForm = () => {
         <S.CheckboxContainer>
           {beneficios.map((elem) => {
             return (
-              <InputCheckbox
-                selectValue={selectValue}
-                atividades={elem.name}
-              />
+              <InputCheckbox selectValue={selectValue} atividades={elem.name} />
             );
           })}
         </S.CheckboxContainer>
