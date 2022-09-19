@@ -1,20 +1,17 @@
-import { useState } from "react";
 import * as S from "./styles";
 import { habilidades } from "../../mocks";
 
 interface InputPros {
   atividades?: string;
-  category?: string | any;
-  selectValue?: any;
-  desmarcado?: any;
-  habilidadesState?: any;
-  name?: string | undefined;
-  inputName?: string;
+  selectValue: string | undefined;
+  desmarcado?: boolean;
+  habilidadesState?: object;
+  name: string | undefined;
+  inputName: string;
   onChange?: any;
-  verificar?: any;
-  type?: any;
+  type: string;
   setTempoExperiencia?: any;
-  setGrauAcademico?: any;
+
 }
 
 const InputCheckbox = ({

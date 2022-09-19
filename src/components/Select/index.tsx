@@ -2,12 +2,9 @@ import * as S from "./styles";
 import { cargos } from "../../mocks";
 
 interface SelectProps {
-  img?: string;
-  selected?: string;
-  setSalario?: any;
-  selectValue?: any;
-  setSelectValue?: any;
-  onChange?: any
+  img: string;
+  setSelectValue: any;
+  onChange?: any;
 }
 
 const Select = ({ img, setSelectValue, onChange }: SelectProps) => {

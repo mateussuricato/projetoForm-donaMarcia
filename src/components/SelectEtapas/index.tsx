@@ -2,22 +2,15 @@ import * as S from "./styles";
 import { etapas } from "../../mocks";
 
 interface SelectProps {
-  img?: string;
-  selected?: string;
-  setSalario?: any;
-  setSelectValue?: any;
-  onChange?: any
-  setSelectEtapas: any
+  img: string;
+  setSelectEtapas: any;
 }
 
 const Select = ({ img, setSelectEtapas }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
-      <S.Select
-        name="etapas"
-        onChange={(e) => setSelectEtapas(e.target.value)}
-      >
+      <S.Select name="etapas" onChange={(e) => setSelectEtapas(e.target.value)}>
         <option selected disabled>
           Selecione a(s) etapa(s)...
         </option>

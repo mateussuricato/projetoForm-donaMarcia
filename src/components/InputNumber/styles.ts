@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
+import InputMask from 'react-input-mask'
 
 interface InputProps {
   active?: boolean;
+
 }
+
 
 export const InputContainer = styled.div`
   background-color: #fafafa;
@@ -43,6 +46,7 @@ export const InputOverlay = styled.div`
     width: 20px;
     font-size: 18px;
   }
+
 `;
 
 export const Input = styled.input`

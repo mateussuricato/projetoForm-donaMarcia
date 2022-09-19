@@ -2,14 +2,14 @@ import * as S from "./styles";
 import jsPDF from "jspdf";
 
 interface RenderProps {
-  selectValue: any;
-  salario: any;
-  selectEtapas: any;
+  selectValue: string | undefined;
+  salario: string;
+  selectEtapas: string | undefined;
   checkedItems: any;
   checkedItensHabilidades: any;
   checkedItensBeneficios: any;
-  tempoExperiencia: any;
-  grauAcademico: any;
+  tempoExperiencia: string | undefined;
+  grauAcademico: string | undefined;
 }
 
 const Render = ({

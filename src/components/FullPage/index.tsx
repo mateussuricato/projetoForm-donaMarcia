@@ -7,11 +7,11 @@ import Render from "../Render";
 const FullPage = () => {
 
 
-  const [selectValue, setSelectValue] = useState<any>();
-  const [selectEtapas, setSelectEtapas] = useState<any>();
+  const [selectValue, setSelectValue] = useState();
+  const [selectEtapas, setSelectEtapas] = useState();
   const [checkedAtividades, setCheckedAtividades] = useState<any>([]);
-  const [tempoExperiencia, setTempoExperiencia] = useState<any>();
-  const [grauAcademico, setGrauAcademico] = useState<any>();
+  const [tempoExperiencia, setTempoExperiencia] = useState();
+  const [grauAcademico, setGrauAcademico] = useState();
 
   const checkedItems = checkedAtividades.length
     ? checkedAtividades.reduce((total: string, item: string) => {

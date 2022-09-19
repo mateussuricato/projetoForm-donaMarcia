@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import InputCheckbox from "../InputCheckbox";
 import InputNumber from "../InputNumber";
 import jsPDF from "jspdf";
@@ -21,16 +21,22 @@ import SelectEtapas from "../SelectEtapas";
 import InputRadio from "../InputRadio";
 
 interface ModalProps {
-  setSelectValue: any;
-  selectValue: any;
-  setSalario: any;
-  setSelectEtapas: any;
-  handleCheckAtividades: any;
-  handleCheckHabilidades: any;
-  handleCheckBeneficios: any;
-  setTempoExperiencia: any;
-  setGrauAcademico: any;
-  setCheckedHabilidades: any
+  setSelectValue: React.Dispatch<React.SetStateAction<undefined>>;
+  selectValue: string | undefined;
+  setSalario: Dispatch<SetStateAction<string>>;
+  setSelectEtapas: React.Dispatch<React.SetStateAction<undefined>>;
+  handleCheckAtividades: (event: {
+    target: { checked: any; value: any };
+  }) => void;
+  handleCheckHabilidades: (event: {
+    target: { checked: any; value: any };
+  }) => void;
+  handleCheckBeneficios: (event: {
+    target: { checked: any; value: any };
+  }) => void;
+  setTempoExperiencia: React.Dispatch<React.SetStateAction<undefined>>;
+  setGrauAcademico: React.Dispatch<React.SetStateAction<undefined>>;
+  setCheckedHabilidades: any;
 }
 
 const ModalForm = ({
@@ -46,7 +52,7 @@ const ModalForm = ({
   setGrauAcademico,
 }: ModalProps) => {
   const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
-  const [desmarcado, setDesmarcado] = useState(false)
+  const [desmarcado, setDesmarcado] = useState(false);
 
   let salarioValue = "";
 
@@ -65,29 +71,28 @@ const ModalForm = ({
   useEffect(() => {
     if (selectValue === "Auxiliar de limpeza") {
       setHabilidadesState(auxiliarlimpeza);
-      setCheckedHabilidades("")
-      setDesmarcado(false)
+      setCheckedHabilidades("");
+      setDesmarcado(false);
     } else if (selectValue === "Confeiteiro(a)") {
       salarioValue = Number(salarioValue + salario[1].value).toFixed(2);
       setHabilidadesState(confeiteiro);
-      setCheckedHabilidades("")
-      setDesmarcado(false)
-      document.location.reload();
+      setCheckedHabilidades("");
+      setDesmarcado(false);
     } else if (selectValue === "Gerente") {
       salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
       setHabilidadesState(gerente);
-      setCheckedHabilidades("")
-      setDesmarcado(false)
+      setCheckedHabilidades("");
+      setDesmarcado(false);
     } else if (selectValue === "Nutricionista") {
       salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
       setHabilidadesState(nutricionista);
-      setCheckedHabilidades("")
-      setDesmarcado(false)
+      setCheckedHabilidades("");
+      setDesmarcado(false);
     } else if (selectValue === "Recepcionista") {
       salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
       setHabilidadesState(recepcionista);
-      setCheckedHabilidades("")
-      setDesmarcado(false)
+      setCheckedHabilidades("");
+      setDesmarcado(false);
     }
   }, [selectValue]);
 
@@ -109,7 +114,6 @@ const ModalForm = ({
           selectValue={selectValue}
           setSalario={setSalario}
           salario={salarioValue}
-          placeholder={"Salário..."}
           img={"https://i.imgur.com/Iuzso5g.png"}
         ></InputNumber>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
@@ -160,7 +164,6 @@ const ModalForm = ({
                     inputName={"tempoexperiencia"}
                     name={elem.name}
                     selectValue={selectValue}
-                    category={elem.categoryCargo}
                     atividades={elem.name}
                   />
                 );

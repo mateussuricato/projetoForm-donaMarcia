@@ -3,18 +3,10 @@ import * as S from "./styles";
 import { habilidades } from "../../mocks";
 
 interface InputPros {
-  atividades?: string;
-  category?: string | any;
-  selectValue?: any;
-  desmarcado?: any;
-  habilidadesState?: any;
-  name?: string | undefined;
-  inputName?: string;
-  onChange?: any;
-  verificar?: any;
-  type?: any;
-  setTempoExperiencia?: any;
-  setGrauAcademico?: any;
+  atividades: string;
+  name: string | undefined;
+  inputName: string;
+  setGrauAcademico: any;
 }
 
 const InputRadio = ({

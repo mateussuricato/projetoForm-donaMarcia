@@ -1,23 +1,21 @@
-import { useEffect, useState } from "react";
-import { updateExpressionWithTypeArguments } from "typescript";
+import { Dispatch, SetStateAction } from "react";
 import * as S from "./styles";
 
 interface InputProps {
-  placeholder?: string;
-  img?: string;
-  salario?: any;
-  onChange?: any;
-  setSalario: any;
-  selectValue?: any;
+  img: string;
+  salario: string;
+  setSalario: Dispatch<SetStateAction<string>>;
+  selectValue: string | undefined;
 }
 
 const InputNumber = ({
   selectValue,
   img,
   salario,
-  onChange,
   setSalario,
 }: InputProps) => {
+
+  const numero = 5
 
   return (
     <S.InputContainer>
@@ -26,6 +24,7 @@ const InputNumber = ({
           <img src={img} alt="" />
           <p>R$</p>
           <S.Input
+          maxLength={numero}
             id="salario"
             onChange={(e) => setSalario(e.target.value)}
             name="salariodocargo"
@@ -38,6 +37,7 @@ const InputNumber = ({
           <img src={img} alt="" />
           <p>R$</p>
           <S.Input
+            maxLength={numero}
             id="salario"
             active
             onChange={(e) => setSalario(e.target.value)}
