@@ -25,6 +25,7 @@ const InputCheckbox = ({
   onChange,
   type,
   setTempoExperiencia,
+  desmarcado
 
 }: InputPros) => {
   if (habilidadesState == habilidades) {
@@ -40,6 +41,7 @@ const InputCheckbox = ({
           onChange={(e) => {
             setTempoExperiencia(e.target.value)
           }}
+          defaultChecked={desmarcado}
           onChangeCapture={onChange}
           name={inputName}
           value={name}

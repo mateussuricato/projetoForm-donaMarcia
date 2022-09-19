@@ -18,7 +18,10 @@ export const RenderContainer = styled.div`
       border-radius: 7px;
     }
 
-    button {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding-right: 20px;
       width: 150px;
       height: 50px;
@@ -40,8 +43,8 @@ export const RenderOverlay = styled.div`
   margin-top: 10px;
   min-width: 587px;
   max-width: 587px;
-  min-height: 834px;
-  max-height: 834px;
+  min-height: 820px;
+  max-height: 820px;
   background-color: white;
   box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;

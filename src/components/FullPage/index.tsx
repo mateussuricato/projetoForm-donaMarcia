@@ -22,7 +22,7 @@ const FullPage = () => {
   const handleCheckAtividades = (event: {
     target: { checked: any; value: any };
   }) => {
-    var updatedList = [...checkedAtividades];
+    let updatedList = [...checkedAtividades];
     if (event.target.checked) {
       updatedList = [...checkedAtividades, event.target.value];
     } else {
@@ -42,7 +42,7 @@ const FullPage = () => {
   const handleCheckHabilidades = (event: {
     target: { checked: any; value: any };
   }) => {
-    var updatedList = [...checkedHabilidades];
+    let updatedList = [...checkedHabilidades];
     if (event.target.checked) {
       updatedList = [...checkedHabilidades, event.target.value];
     } else {
@@ -62,46 +62,30 @@ const FullPage = () => {
   const handleCheckBeneficios = (event: {
     target: { checked: any; value: any };
   }) => {
-    var updatedList = [...checkedBeneficios];
+    let updatedList = [...checkedBeneficios];
     if (event.target.checked) {
       updatedList = [...checkedBeneficios, event.target.value];
     } else {
       updatedList.splice(checkedBeneficios.indexOf(event.target.value), 1);
     }
     setCheckedBeneficios(updatedList);
+
   };
 
   const [salario, setSalario] = useState("0");
 
-  const initialValue = {
-    cargo: "",
-    salariodocargo: "",
-    etapas: "",
-    atividadesdocargo: "",
-    habilidadesdocargo: "",
-    tempoexperiencia: "",
-    grauexperiencia: "",
-    beneficioscargo: "",
-  };
 
-  const [values, setValues] = useState(initialValue);
-
-  function onChange(ev: { target: { name: any; value: any } }) {
-    const { name, value } = ev.target;
-
-    setValues({ ...values, [name]: value });
-  }
 
   return (
     <S.FullPage>
       <ModalForm
+      setCheckedHabilidades={setCheckedHabilidades}
         setGrauAcademico={setGrauAcademico}
         handleCheckBeneficios={handleCheckBeneficios}
         handleCheckHabilidades={handleCheckHabilidades}
         handleCheckAtividades={handleCheckAtividades}
         setSelectEtapas={setSelectEtapas}
         setSalario={setSalario}
-        onChange={onChange}
         selectValue={selectValue}
         setSelectValue={setSelectValue}
         setTempoExperiencia={setTempoExperiencia}

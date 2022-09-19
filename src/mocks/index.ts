@@ -381,24 +381,3 @@ export const beneficios = [
     name: "VB Presente",
   },
 ];
-
-export const atividades2 = [
-  "Atendimento ao cliente",
-  "Conservação do ambiente",
-  "Atender telefone",
-  "Limpeza dos ambientes",
-  "Preparar e criar receitas",
-  "Fazer bolos",
-  "Fazer doces",
-  "Planejamento",
-  "Anotar pedidos",
-  "Organização",
-  "Fazer tortas",
-  "Controle",
-  "Conferir qualidade dos alimentos",
-  "Fazer salgados",
-  "Controle de valor nutricional",
-  "Coletar lixo",
-  "Definição de estratégias",
-  "Planejamento de cardápios",
-];

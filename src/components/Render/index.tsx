@@ -60,9 +60,9 @@ const Render = ({
       </S.RenderOverlay>
       <div className="button">
         <img src="https://i.imgur.com/ws8SR34.png" alt="" />
-        <button onClick={generatePDF} type="button">
+        <div onClick={generatePDF} >
           Gerar Pdf
-        </button>
+        </div>
       </div>
     </S.RenderContainer>
   );
