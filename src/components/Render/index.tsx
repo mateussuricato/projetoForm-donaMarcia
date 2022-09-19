@@ -58,9 +58,9 @@ const Render = ({
           <img src="https://i.imgur.com/tQrHHbf.png" alt="" />
         </S.Footer>
       </S.RenderOverlay>
-      <div className="button">
+      <div onClick={generatePDF} className="button">
         <img src="https://i.imgur.com/ws8SR34.png" alt="" />
-        <div onClick={generatePDF} >
+        <div>
           Gerar Pdf
         </div>
       </div>

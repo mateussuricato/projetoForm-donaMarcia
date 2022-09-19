@@ -8,10 +8,23 @@ export const FormOverlay = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  max-height: 80vh;
+  max-height: 100vh;
   background-color: #fafafa;
   border-radius: 10px;
   overflow-y: scroll;
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #67D8F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #E75174;
+  border-radius: 25px;
+}
 
   .logo {
     width: 200px;

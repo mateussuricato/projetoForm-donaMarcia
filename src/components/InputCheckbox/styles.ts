@@ -30,4 +30,4 @@ export const RadioOverlay = styled.div`
 export const Aviso = styled.p`
   background-color: #fafafa;
   color: red;
-`
+`;

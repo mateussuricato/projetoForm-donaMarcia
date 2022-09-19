@@ -1,20 +1,27 @@
 import styled from "styled-components";
 
 export const RenderContainer = styled.div`
+
   display: flex;
   flex-direction: column;
+  transform: scale(0.7);
 
   .button {
     margin-top: 5px;
     border-radius: 7px;
-    background-color: #970605;
+    background-color: #E75174;
     cursor: pointer;
     display: flex;
+    transition: 0.2s;
+
+    :hover {
+      background-color: #67d8f8;
+    }
 
     img {
-      width: 30px;
-      background-color: #970605;
-      padding: 5px;
+      width: 40px;
+      background-color: transparent;
+      padding: 10px;
       border-radius: 7px;
     }
 
@@ -23,16 +30,16 @@ export const RenderContainer = styled.div`
       justify-content: center;
       align-items: center;
       padding-right: 20px;
-      width: 150px;
-      height: 50px;
-      background-color: #970605;
+      width: 200px;
+      height: 70px;
+      background-color: transparent;
       cursor: pointer;
       border-radius: 7px;
       border: none;
       color: white;
       font-weight: 500;
       font-family: Roboto;
-      font-size: 15px;
+      font-size: 30px;
       text-transform: uppercase;
     }
   }
@@ -40,14 +47,15 @@ export const RenderContainer = styled.div`
 
 export const RenderOverlay = styled.div`
   padding: 4px;
-  margin-top: 10px;
+  position: relative;
+  top: -40px;
   min-width: 587px;
   max-width: 587px;
   min-height: 820px;
   max-height: 820px;
   background-color: white;
   box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  cursor: default;
 `;
 
 export const Larissa = styled.div`

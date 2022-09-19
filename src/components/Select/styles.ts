@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SelectOverlay = styled.div`
   display: flex;
@@ -8,6 +8,7 @@ export const SelectOverlay = styled.div`
   transition: 0.3s;
   border-radius: 17px;
   width: 250px;
+
   :hover {
     border: 1px solid #ea4f75;
     box-shadow: 0px 0px 5px 1px #ea4f75;
@@ -32,6 +33,4 @@ export const Select = styled.select`
     box-shadow: 0 0 0 0;
     outline: 0;
   }
-
-
 `;
