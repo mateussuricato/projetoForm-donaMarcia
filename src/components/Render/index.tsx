@@ -57,7 +57,7 @@ const Render = ({
             <h2>Cargo:</h2>
             <p>{selectValue}</p>
           </S.Larissa>
-        <S.Label>Salário: {salario},00</S.Label>
+        <S.Label>Salário: R$ {salario},00</S.Label>
         </S.Header>
         <S.Body>
           <S.Label><b>Etapas do Processo :</b> <S.Paula>{selectEtapas}</S.Paula></S.Label>
