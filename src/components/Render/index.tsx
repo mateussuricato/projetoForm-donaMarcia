@@ -37,10 +37,12 @@ const Render = ({
   };
 
   return (
-    <div>
+    <S.RenderContainer>
       <S.RenderOverlay  onClick={generatePDF} id="pdf">
-        <h1>Cargo: {selectValue}</h1>
-        <h3>Salario: {salario},00</h3>
+        <div>
+          <h1>Cargo: {selectValue}</h1>
+          <h3>Salario: {salario},00</h3>
+        </div>
         <h3>Etapas do Processo: {selectEtapas}</h3>
         <h3>Atividades do cargo: {checkedItems}</h3>
         <h3>Habilidades Necessarias: {checkedItensHabilidades}</h3>
@@ -48,10 +50,13 @@ const Render = ({
         <h3>Grau Acadêmico: {grauAcademico}</h3>
         <h3>Beneficios do Cargo: {checkedItensBeneficios}</h3>
       </S.RenderOverlay>
-        <button onClick={generatePDF} type="button">
-          Gerar Pdf
-        </button>
-    </div>
+        <div className="button">
+          <img src="https://i.imgur.com/ws8SR34.png" alt="" />
+          <button onClick={generatePDF} type="button">
+            Gerar Pdf
+          </button>
+        </div>
+    </S.RenderContainer>
   );
 };
 
