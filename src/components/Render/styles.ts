@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const RenderContainer = styled.div`
-
   display: flex;
   flex-direction: column;
   transform: scale(0.7);
+  position: relative;
+  top: -50px;
 
   .button {
-    margin-top: 5px;
+    margin-top: 50px;
     border-radius: 7px;
-    background-color: #E75174;
+    background-color: #e75174;
     cursor: pointer;
     display: flex;
     transition: 0.2s;
