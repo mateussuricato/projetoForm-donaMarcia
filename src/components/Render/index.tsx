@@ -38,24 +38,32 @@ const Render = ({
 
   return (
     <S.RenderContainer>
-      <S.RenderOverlay  onClick={generatePDF} id="pdf">
-        <div>
-          <h1>Cargo: {selectValue}</h1>
-          <h3>Salario: {salario},00</h3>
-        </div>
-        <h3>Etapas do Processo: {selectEtapas}</h3>
-        <h3>Atividades do cargo: {checkedItems}</h3>
-        <h3>Habilidades Necessarias: {checkedItensHabilidades}</h3>
-        <h3>Tempo de Experiência: {tempoExperiencia}</h3>
-        <h3>Grau Acadêmico: {grauAcademico}</h3>
-        <h3>Beneficios do Cargo: {checkedItensBeneficios}</h3>
+      <S.RenderOverlay onClick={generatePDF} id="pdf">
+        <S.Header>
+          <S.Larissa>
+            <h2>Cargo:</h2>
+            <p>{selectValue}</p>
+          </S.Larissa>
+        <S.Label>Salário: {salario},00</S.Label>
+        </S.Header>
+        <S.Body>
+          <S.Label><b>Etapas do Processo :</b> <S.Paula>{selectEtapas}</S.Paula></S.Label>
+          <S.Label><b>Atividades do cargo:</b> <S.Paula>{checkedItems}</S.Paula></S.Label>
+          <S.Label><b>Habilidades Necessarias :</b> <S.Paula>{checkedItensHabilidades}</S.Paula></S.Label>
+          <S.Label><b>Tempo de Experiência:</b> <S.Paula>{tempoExperiencia}</S.Paula></S.Label>
+          <S.Label><b>Grau Acadêmico:</b> <S.Paula>{grauAcademico}</S.Paula></S.Label>
+          <S.Label><b>Beneficios do Cargo:</b> <S.Paula>{checkedItensBeneficios}</S.Paula></S.Label>
+        </S.Body>
+        <S.Footer>
+          <img src="https://i.imgur.com/tQrHHbf.png" alt="" />
+        </S.Footer>
       </S.RenderOverlay>
-        <div className="button">
-          <img src="https://i.imgur.com/ws8SR34.png" alt="" />
-          <button onClick={generatePDF} type="button">
-            Gerar Pdf
-          </button>
-        </div>
+      <div className="button">
+        <img src="https://i.imgur.com/ws8SR34.png" alt="" />
+        <button onClick={generatePDF} type="button">
+          Gerar Pdf
+        </button>
+      </div>
     </S.RenderContainer>
   );
 };
