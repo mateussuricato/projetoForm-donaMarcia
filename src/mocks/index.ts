@@ -187,15 +187,15 @@ export const confeiteiro = [
   },
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
-    name: "Agilidade",
+    name: "Agilidade ",
   },
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
-    name: "Simpatia",
+    name: "Simpatia ",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
-    name: "Organização",
+    name: "Organização ",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
@@ -214,15 +214,15 @@ export const confeiteiro = [
 export const gerente = [
   {
     id: "3580e44b-9d0c-48c6-96fd-b1f6a17725ae",
-    name: "Agilidade",
+    name: " Agilidade",
   },
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
-    name: "Simpatia",
+    name: " Simpatia",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
-    name: "Organização",
+    name: " Organização  ",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
@@ -242,22 +242,22 @@ export const gerente = [
   },
   {
     id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
-    name: "Sensibilidade para lidar com pessoas",
+    name: " Sensibilidade para lidar com pessoas",
   },
 ];
 
 export const nutricionista = [
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
-    name: "Simpatia",
+    name: " Simpatia ",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
-    name: "Organização",
+    name: " Organização ",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
-    name: "Trabalhar em equipe",
+    name: "Trabalhar em equipe ",
   },
   {
     id: "f24ff7e8-b95b-42d8-ac3c-73a3c875780a",
@@ -281,18 +281,18 @@ export const nutricionista = [
   },
   {
     id: "85d7471a-9ba2-4dd0-adc2-2d0f1dcdd613",
-    name: "Procurar (e dar) feedback",
+    name: "Procurar (e dar) feedback ",
   },
 ];
 
 export const recepcionista = [
   {
     id: "0c3fde2b-e7ec-4fe3-8573-1936f7187dc6",
-    name: "Simpatia",
+    name: "Simpatia  ",
   },
   {
     id: "0e721942-4e73-474a-a873-bb027e5c873c",
-    name: "Organização",
+    name: "Organização  ",
   },
   {
     id: "c1205bf3-8675-44b6-a2c5-9e05f44f68ba",
