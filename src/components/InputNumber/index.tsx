@@ -6,16 +6,17 @@ interface InputProps {
   img?: string
   salario?: any
   onChange?: any
+  setSalario: any
 }
 
-const InputNumber = ({placeholder, img, salario, onChange}: InputProps) => {
+const InputNumber = ({placeholder, img, salario, onChange, setSalario}: InputProps) => {
 
 
   return (
     <S.InputOverlay>
       <img src={img} alt="" />
       <p>R$</p>
-      <S.Input onChange={onChange} name="salariodocargo" type="number" placeholder={placeholder} defaultValue={`${salario}`}></S.Input>
+      <S.Input onChange={(e) => setSalario(e.target.value)} name="salariodocargo" type="number" placeholder={placeholder} defaultValue={`${salario}`}></S.Input>
     </S.InputOverlay>
   )
 }
