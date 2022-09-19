@@ -17,38 +17,27 @@ interface InputPros {
   setGrauAcademico?: any;
 }
 
-const InputCheckbox = ({
+const InputRadio = ({
   atividades,
-  habilidadesState,
   name,
   inputName,
-  onChange,
-  type,
-  setTempoExperiencia,
+  setGrauAcademico
 
 }: InputPros) => {
-  if (habilidadesState == habilidades) {
-    return (
-      <S.Aviso>
-        Selecione um cargo para as respectivas habilidades aparecerem *
-      </S.Aviso>
-    );
-  } else {
+
     return (
       <S.RadioOverlay>
         <input
           onChange={(e) => {
-            setTempoExperiencia(e.target.value)
+            setGrauAcademico(e.target.value)
           }}
-          onChangeCapture={onChange}
           name={inputName}
           value={name}
-          type={type}
+          type="radio"
         />
         <span>{atividades}</span>
       </S.RadioOverlay>
     );
   }
-};
 
-export default InputCheckbox;
+export default InputRadio;

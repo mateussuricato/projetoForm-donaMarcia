@@ -1,16 +1,17 @@
 import styled, { css } from "styled-components";
 
 interface ScrollProps {
-  activescroll?: boolean
+  activescroll?: boolean;
 }
 
 export const FormOverlay = styled.form`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 2000px;
+  max-width: 700px;
+  max-height: 80vh;
   background-color: #fafafa;
   border-radius: 10px;
+  overflow-y: scroll;
 
   .logo {
     width: 200px;
@@ -24,8 +25,7 @@ export const InputContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   background-color: #fafafa;
-  gap: 30px;
-  padding: 40px;
+  padding: 20px;
   margin: 0;
 `;
 
@@ -33,35 +33,39 @@ export const CheckboxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   background-color: #fafafa;
-  gap: 30px;
+  gap: 5px;
   padding: 10px 50px;
   margin: 0;
 
-  ${({activescroll}: ScrollProps) =>
+  ${({ activescroll }: ScrollProps) =>
     activescroll &&
     css`
       overflow-y: scroll;
       max-height: 350px;
     `}
 
-    h3 {
-      background-color: #fafafa;
-    }
+  .experienciacontainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    gap: 10px;
+    background-color: #fafafa;
+  }
 
-    .experienciacontainer {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 800px;
-      gap: 30px;
-      background-color: #fafafa;
-    }
-
-    p {
-      margin: 0 auto;
-    }
+  p {
+    margin: 0 auto;
+  }
 `;
 
-export const Titulo = styled.h1`
+export const Titulo = styled.h2`
+  max-width: 920px;
+  background-color: #fafafa;
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+`;
+
+export const Paragrafo = styled.p`
   max-width: 920px;
   background-color: #fafafa;
   margin: 0;
@@ -69,10 +73,11 @@ export const Titulo = styled.h1`
   padding: 20px;
 `;
 
-export const Paragrafo = styled.p`
-max-width: 920px;
-background-color: #fafafa;
-margin: 0;
-text-align: center;
-padding: 20px;
+export const ExperienciaContainer = styled.div`
+  display: block;
+
+  h4 {
+    text-align: center;
+    background-color: #fafafa;
+  }
 `;

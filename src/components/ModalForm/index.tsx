@@ -19,92 +19,35 @@ import {
   beneficios,
 } from "../../mocks";
 import SelectEtapas from "../SelectEtapas";
-import axios from "axios";
+import InputRadio from "../InputRadio";
 
-const ModalForm = () => {
-  const [selectValue, setSelectValue] = useState<any>("Selecione ");
+interface ModalProps {
+  setSelectValue: any;
+  selectValue: any;
+  onChange: any;
+  setSalario: any;
+  setSelectEtapas: any;
+  handleCheckAtividades: any;
+  handleCheckHabilidades: any;
+  handleCheckBeneficios: any;
+  setTempoExperiencia: any;
+  setGrauAcademico: any;
+}
+
+const ModalForm = ({
+  setSelectValue,
+  selectValue,
+  onChange,
+  setSalario,
+  setSelectEtapas,
+  handleCheckAtividades,
+  handleCheckHabilidades,
+  handleCheckBeneficios,
+  setTempoExperiencia,
+  setGrauAcademico,
+}: ModalProps) => {
   const [habilidadesState, setHabilidadesState] = useState<any>(habilidades);
   const [desmarcado, setDesmarcado] = useState(false);
-  const [checkedAtividades, setCheckedAtividades] = useState<any>([]);
-
-  const checkedItems = checkedAtividades.length
-    ? checkedAtividades.reduce((total: string, item: string) => {
-        return total + ", " + item;
-      })
-    : "";
-
-  const handleCheckAtividades = (event: {
-    target: { checked: any; value: any };
-  }) => {
-    var updatedList = [...checkedAtividades];
-    if (event.target.checked) {
-      updatedList = [...checkedAtividades, event.target.value];
-    } else {
-      updatedList.splice(checkedAtividades.indexOf(event.target.value), 1);
-    }
-    setCheckedAtividades(updatedList);
-  };
-
-  const [checkedHabilidades, setCheckedHabilidades] = useState<any>([]);
-
-  const checkedItensHabilidades = checkedHabilidades.length
-    ? checkedHabilidades.reduce((total: string, item: string) => {
-        return total + ", " + item;
-      })
-    : "";
-
-  const handleCheckHabilidades = (event: {
-    target: { checked: any; value: any };
-  }) => {
-    var updatedList = [...checkedHabilidades];
-    if (event.target.checked) {
-      updatedList = [...checkedHabilidades, event.target.value];
-    } else {
-      updatedList.splice(checkedHabilidades.indexOf(event.target.value), 1);
-    }
-    setCheckedHabilidades(updatedList);
-  };
-
-  const [checkedBeneficios, setCheckedBeneficios] = useState<any>([]);
-
-  const checkedItensBeneficios = checkedBeneficios.length
-    ? checkedBeneficios.reduce((total: string, item: string) => {
-        return total + ", " + item;
-      })
-    : "";
-
-  const handleCheckBeneficios = (event: {
-    target: { checked: any; value: any };
-  }) => {
-    var updatedList = [...checkedBeneficios];
-    if (event.target.checked) {
-      updatedList = [...checkedBeneficios, event.target.value];
-    } else {
-      updatedList.splice(checkedBeneficios.indexOf(event.target.value), 1);
-    }
-    setCheckedBeneficios(updatedList);
-  };
-
-  const initialValue = {
-    cargo: "",
-    salariodocargo: "",
-    etapas: "",
-    atividadesdocargo: "",
-    habilidadesdocargo: "",
-    tempoexperiencia: "",
-    grauexperiencia: "",
-    beneficioscargo: "",
-  };
-
-  const [values, setValues] = useState(initialValue);
-
-  console.log(values);
-
-  function onChange(ev: { target: { name: any; value: any } }) {
-    const { name, value } = ev.target;
-
-    setValues({ ...values, [name]: value });
-  }
 
   let salarioValue = "";
 
@@ -143,17 +86,6 @@ const ModalForm = () => {
     }
   }, [selectValue]);
 
-
-const generatePDF = () => {
-  const doc: any = new jsPDF("p", "pt", "a4")
-  doc.html(document.querySelector("#form"), {
-    callback: function(pdf: { save: (arg0: string) => void; }){
-      pdf.save("mypdf.pdf")
-    }
-  })
-}
-
-
   return (
     <div>
       <S.FormOverlay id="form">
@@ -165,21 +97,20 @@ const generatePDF = () => {
             setSelectValue={setSelectValue}
           ></Select>
           <InputNumber
+            setSalario={setSalario}
             onChange={onChange}
             salario={salarioValue}
             placeholder={"Salário..."}
             img={"https://i.imgur.com/LNAjnQH.png"}
           ></InputNumber>
           <SelectEtapas
+            setSelectEtapas={setSelectEtapas}
             onChange={onChange}
             img={"https://i.imgur.com/LNAjnQH.png"}
           ></SelectEtapas>
         </S.InputContainer>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
-        {checkedItems && (
-          <S.Paragrafo>{`Atividades selecionadas: ${checkedItems}`}</S.Paragrafo>
-        )}
-        <S.CheckboxContainer activescroll>
+        <S.CheckboxContainer>
           {atividades2.map((elem, index) => {
             return (
               <InputCheckbox
@@ -195,9 +126,6 @@ const generatePDF = () => {
           })}
         </S.CheckboxContainer>
         <S.Titulo>Habilidades necessárias</S.Titulo>
-        {checkedItensHabilidades && (
-          <S.Paragrafo>{`Habilidades selecionadas: ${checkedItensHabilidades}`}</S.Paragrafo>
-        )}
         <S.CheckboxContainer>
           {habilidadesState.map((elem: { name: string | undefined }) => {
             return (
@@ -217,45 +145,44 @@ const generatePDF = () => {
         </S.CheckboxContainer>
         <S.Titulo>Experiência necessária</S.Titulo>
         <S.CheckboxContainer>
-          <h3>Tempo de experiência</h3>
-          <div className="experienciacontainer">
-            {tempoexperiencia.map((elem) => {
-              return (
-                <InputCheckbox
-                  type={"radio"}
-                  key={elem.name}
-                  verificar={onChange}
-                  inputName={"tempoexperiencia"}
-                  name={elem.name}
-                  selectValue={selectValue}
-                  category={elem.categoryCargo}
-                  atividades={elem.name}
-                />
-              );
-            })}
-          </div>
-          <h3>Grau acadêmico</h3>
-          <div className="experienciacontainer">
-            {experiencia.map((elem) => {
-              return (
-                <InputCheckbox
-                  type={"radio"}
-                  key={elem.name}
-                  verificar={onChange}
-                  inputName={"grauexperiencia"}
-                  name={elem.name}
-                  selectValue={selectValue}
-                  category={elem.categoryCargo}
-                  atividades={elem.name}
-                />
-              );
-            })}
-          </div>
+          <S.ExperienciaContainer>
+            <h4>Tempo de experiência</h4>
+            <div className="experienciacontainer">
+              {tempoexperiencia.map((elem) => {
+                return (
+                  <InputCheckbox
+                    setTempoExperiencia={setTempoExperiencia}
+                    type={"radio"}
+                    key={elem.name}
+                    verificar={onChange}
+                    inputName={"tempoexperiencia"}
+                    name={elem.name}
+                    selectValue={selectValue}
+                    category={elem.categoryCargo}
+                    atividades={elem.name}
+                  />
+                );
+              })}
+            </div>
+          </S.ExperienciaContainer>
+          <S.ExperienciaContainer>
+            <h4>Grau acadêmico</h4>
+            <div className="experienciacontainer">
+              {experiencia.map((elem) => {
+                return (
+                  <InputRadio
+                    setGrauAcademico={setGrauAcademico}
+                    key={elem.name}
+                    inputName={"grauexperiencia"}
+                    name={elem.name}
+                    atividades={elem.name}
+                  />
+                );
+              })}
+            </div>
+          </S.ExperienciaContainer>
         </S.CheckboxContainer>
         <S.Titulo>Benefícios do cargo</S.Titulo>
-        {checkedItensBeneficios && (
-          <S.Paragrafo>{`Habilidades selecionadas: ${checkedItensBeneficios}`}</S.Paragrafo>
-        )}
         <S.CheckboxContainer>
           {beneficios.map((elem) => {
             return (
@@ -272,7 +199,6 @@ const generatePDF = () => {
             );
           })}
         </S.CheckboxContainer>
-        <button onClick={generatePDF} type="button">Gerar Pdf</button>
       </S.FormOverlay>
     </div>
   );

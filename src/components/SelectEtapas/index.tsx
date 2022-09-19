@@ -7,15 +7,16 @@ interface SelectProps {
   setSalario?: any;
   setSelectValue?: any;
   onChange?: any
+  setSelectEtapas: any
 }
 
-const Select = ({ img, onChange }: SelectProps) => {
+const Select = ({ img, setSelectEtapas }: SelectProps) => {
   return (
     <S.SelectOverlay>
       <img src={img} alt="" />
       <S.Select
-        onChangeCapture={onChange}
         name="etapas"
+        onChange={(e) => setSelectEtapas(e.target.value)}
       >
         <option selected disabled>
           Etapas do processo
