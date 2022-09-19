@@ -264,7 +264,7 @@ export const nutricionista = [
   },
   {
     id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
-    name: "Ter sensibilidade para lidar com pessoas",
+    name: "Sensibilidade para lidar com pessoas",
   },
   {
     id: "85d7471a-9ba2-4dd0-adc2-2d0f1dcdd613",
