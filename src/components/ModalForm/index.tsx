@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import InputCheckbox from "../InputCheckbox";
 import InputNumber from "../InputNumber";
+import jsPDF from "jspdf";
 import Select from "../Select";
 import * as S from "./styles";
 import {
@@ -120,18 +121,20 @@ const handleCheckHabilidades = (event: { target: { checked: any; value: any; }; 
     }
   }, [selectValue]);
 
-  function onSubmit(ev: any) {
-    axios.post("http://localhost:5000/cargos", values).then((res) => {
-      console.log("Deu certo");
-    });
-  }
 
-
+const generatePDF = () => {
+  const doc: any = new jsPDF("p", "pt", "a4")
+  doc.html(document.querySelector("#form"), {
+    callback: function(pdf: { save: (arg0: string) => void; }){
+      pdf.save("mypdf.pdf")
+    }
+  })
+}
 
 
   return (
     <div>
-      <S.FormOverlay onSubmit={onSubmit}>
+      <S.FormOverlay id="form">
         <img className="logo" src="https://i.imgur.com/tQrHHbf.png" alt="" />
         <S.InputContainer>
           <Select
@@ -239,7 +242,7 @@ const handleCheckHabilidades = (event: { target: { checked: any; value: any; }; 
             );
           })}
         </S.CheckboxContainer>
-        <button type="submit">VAMOS TESTAR</button>
+        <button onClick={generatePDF} type="button">Gerar Pdf</button>
       </S.FormOverlay>
     </div>
   );
