@@ -93,22 +93,23 @@ const ModalForm = ({
         <S.InputContainer>
           <Select
             onChange={onChange}
-            img={"https://i.imgur.com/LNAjnQH.png"}
+            img={"https://i.imgur.com/tWe7dCJ.png"}
             setSelectValue={setSelectValue}
           ></Select>
-          <InputNumber
-            setSalario={setSalario}
-            onChange={onChange}
-            salario={salarioValue}
-            placeholder={"Salário..."}
-            img={"https://i.imgur.com/LNAjnQH.png"}
-          ></InputNumber>
           <SelectEtapas
             setSelectEtapas={setSelectEtapas}
             onChange={onChange}
-            img={"https://i.imgur.com/LNAjnQH.png"}
+            img={"https://i.imgur.com/NRC9cvn.png"}
           ></SelectEtapas>
         </S.InputContainer>
+        <InputNumber
+          selectValue={selectValue}
+          setSalario={setSalario}
+          onChange={onChange}
+          salario={salarioValue}
+          placeholder={"Salário..."}
+          img={"https://i.imgur.com/Iuzso5g.png"}
+        ></InputNumber>
         <S.Titulo>Atividades que o cargo exerce</S.Titulo>
         <S.CheckboxContainer>
           {atividades2.map((elem, index) => {
@@ -183,7 +184,7 @@ const ModalForm = ({
           </S.ExperienciaContainer>
         </S.CheckboxContainer>
         <S.Titulo>Benefícios do cargo</S.Titulo>
-        <S.CheckboxContainer>
+        <S.CheckboxContainer active>
           {beneficios.map((elem) => {
             return (
               <InputCheckbox

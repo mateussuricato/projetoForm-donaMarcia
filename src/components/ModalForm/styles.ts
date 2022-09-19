@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
-interface ScrollProps {
-  activescroll?: boolean;
+interface CheckBoxProps {
+  active?: boolean;
 }
 
 export const FormOverlay = styled.form`
@@ -25,8 +25,11 @@ export const InputContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   background-color: #fafafa;
-  padding: 20px;
+  padding: 20px 30px;
   margin: 0;
+
+
+
 `;
 
 export const CheckboxContainer = styled.div`
@@ -37,11 +40,10 @@ export const CheckboxContainer = styled.div`
   padding: 10px 50px;
   margin: 0;
 
-  ${({ activescroll }: ScrollProps) =>
-    activescroll &&
+  ${({ active }: CheckBoxProps) =>
+    active &&
     css`
-      overflow-y: scroll;
-      max-height: 350px;
+      margin-bottom: 30px;
     `}
 
   .experienciacontainer {
@@ -58,6 +60,7 @@ export const CheckboxContainer = styled.div`
 `;
 
 export const Titulo = styled.h2`
+  color: #e75174;
   max-width: 920px;
   background-color: #fafafa;
   margin: 0;

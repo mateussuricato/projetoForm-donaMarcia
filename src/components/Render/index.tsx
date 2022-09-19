@@ -38,7 +38,7 @@ const Render = ({
 
   return (
     <S.RenderContainer>
-      <S.RenderOverlay onClick={generatePDF} id="pdf">
+      <S.RenderOverlay id="pdf">
         <S.Header>
           <S.Larissa>
             <h2>Cargo:</h2>

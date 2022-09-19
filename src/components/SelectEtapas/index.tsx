@@ -19,7 +19,7 @@ const Select = ({ img, setSelectEtapas }: SelectProps) => {
         onChange={(e) => setSelectEtapas(e.target.value)}
       >
         <option selected disabled>
-          Etapas do processo
+          Selecione a(s) etapa(s)...
         </option>
         {etapas.map((elem) => {
           return (

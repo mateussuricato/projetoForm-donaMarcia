@@ -51,6 +51,7 @@ export const Larissa = styled.div`
   padding: 30px 30px 10px 30px;
   display: flex;
   background-color: #e75174;
+  gap: 10px;
 
   h2 {
     text-align: right;
@@ -59,7 +60,6 @@ export const Larissa = styled.div`
   }
 
   p {
-    width: 50%;
     text-align: left;
     font-family: Roboto;
     font-weight: 500;
