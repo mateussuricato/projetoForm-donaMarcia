@@ -242,7 +242,7 @@ export const gerente = [
   },
   {
     id: "3d0d93d5-b766-457e-acbd-1e197dbc85a7",
-    name: "Ter sensibilidade para lidar com pessoas",
+    name: "Sensibilidade para lidar com pessoas",
   },
 ];
 
