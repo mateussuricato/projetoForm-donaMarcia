@@ -74,5 +74,5 @@ max-width: 920px;
 background-color: #fafafa;
 margin: 0;
 text-align: center;
-padding: 40px 40px 40px 40px;
+padding: 20px;
 `;
