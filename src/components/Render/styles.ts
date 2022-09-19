@@ -6,9 +6,9 @@ export const RenderContainer = styled.div`
   transform: scale(0.7);
   position: relative;
   top: -50px;
+  gap: 20px;
 
   .button {
-    margin-top: 50px;
     border-radius: 7px;
     background-color: #e75174;
     cursor: pointer;
