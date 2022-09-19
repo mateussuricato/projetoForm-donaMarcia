@@ -4,8 +4,6 @@ import { useState } from "react";
 import Render from "../Render";
 
 const FullPage = () => {
-
-
   const [selectValue, setSelectValue] = useState();
   const [selectEtapas, setSelectEtapas] = useState();
   const [checkedAtividades, setCheckedAtividades] = useState<any>([]);
@@ -68,18 +66,16 @@ const FullPage = () => {
       updatedList.splice(checkedBeneficios.indexOf(event.target.value), 1);
     }
     setCheckedBeneficios(updatedList);
-
   };
 
   const [salario, setSalario] = useState("0");
-
-
 
   return (
     <div>
       <S.FullPage>
         <ModalForm
-        setCheckedHabilidades={setCheckedHabilidades}
+          setCheckedAtividades={setCheckedAtividades}
+          setCheckedHabilidades={setCheckedHabilidades}
           setGrauAcademico={setGrauAcademico}
           handleCheckBeneficios={handleCheckBeneficios}
           handleCheckHabilidades={handleCheckHabilidades}

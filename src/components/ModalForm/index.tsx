@@ -30,6 +30,7 @@ interface ModalProps {
   selectValue: string | undefined;
   setSalario: Dispatch<SetStateAction<string>>;
   setSelectEtapas: React.Dispatch<React.SetStateAction<undefined>>;
+  setCheckedAtividades: any
   handleCheckAtividades: (event: {
     target: { checked: any; value: any };
   }) => void;
@@ -45,6 +46,7 @@ interface ModalProps {
 }
 
 const ModalForm = ({
+  setCheckedAtividades,
   setCheckedHabilidades,
   setSelectValue,
   selectValue,
@@ -80,6 +82,7 @@ const ModalForm = ({
     if (selectValue === "Auxiliar de limpeza") {
       setHabilidadesState(auxiliarlimpeza);
       setAtividadeState(atividadesauxiliarlimpeza)
+      setCheckedAtividades("");
       setCheckedHabilidades("");
       setDesmarcado(false);
     } else if (selectValue === "Confeiteiro(a)") {
@@ -87,24 +90,28 @@ const ModalForm = ({
       setHabilidadesState(confeiteiro);
       setAtividadeState(atividadesconfeiteiro)
       setCheckedHabilidades("");
+      setCheckedAtividades("");
       setDesmarcado(false);
     } else if (selectValue === "Gerente") {
       salarioValue = Number(salarioValue + salario[2].value).toFixed(2);
       setHabilidadesState(gerente);
       setAtividadeState(atividadesgerente)
       setCheckedHabilidades("");
+      setCheckedAtividades("");
       setDesmarcado(false);
     } else if (selectValue === "Nutricionista") {
       salarioValue = Number(salarioValue + salario[3].value).toFixed(2);
       setHabilidadesState(nutricionista);
       setAtividadeState(atividadesnutricionista)
       setCheckedHabilidades("");
+      setCheckedAtividades("");
       setDesmarcado(false);
     } else if (selectValue === "Recepcionista") {
       salarioValue = Number(salarioValue + salario[4].value).toFixed(2);
       setHabilidadesState(recepcionista);
       setAtividadeState(atividadesrecpcionista)
       setCheckedHabilidades("");
+      setCheckedAtividades("");
       setDesmarcado(false);
     }
   }, [selectValue]);
