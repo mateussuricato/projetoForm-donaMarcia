@@ -5,6 +5,8 @@ import { useState } from "react";
 import Render from "../Render";
 
 const FullPage = () => {
+
+
   const [selectValue, setSelectValue] = useState<any>();
   const [selectEtapas, setSelectEtapas] = useState<any>();
   const [checkedAtividades, setCheckedAtividades] = useState<any>([]);
@@ -69,7 +71,7 @@ const FullPage = () => {
     setCheckedBeneficios(updatedList);
   };
 
-  const [salario, setSalario] = useState(0);
+  const [salario, setSalario] = useState("0");
 
   const initialValue = {
     cargo: "",
