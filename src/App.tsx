@@ -1,11 +1,12 @@
-import './App.css';
-import FullPage from './components/FullPage';
-
+import "./App.css";
+import FullPage from "./components/FullPage";
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
-      <FullPage/>
+      <FullPage />
+      <ToastContainer/>
     </div>
   );
 }

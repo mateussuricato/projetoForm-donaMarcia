@@ -1,5 +1,7 @@
 import * as S from "./styles";
 import jsPDF from "jspdf";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface RenderProps {
   selectValue: string | undefined;
@@ -11,6 +13,16 @@ interface RenderProps {
   tempoExperiencia: string | undefined;
   grauAcademico: string | undefined;
 }
+
+const notify = () => toast('⬇️ Baixando PDF', {
+  position: "top-right",
+  autoClose: 500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  });
 
 const Render = ({
   selectValue,
@@ -31,9 +43,10 @@ const Render = ({
       }) {
         const pageCount = doc.internal.getNumberOfPages();
         pdf.deletePage(pageCount);
-        pdf.save("mypdf.pdf");
+        pdf.save("obuc.pdf");
       },
     });
+    notify()
   };
 
   return (

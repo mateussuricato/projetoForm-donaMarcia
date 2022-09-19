@@ -1,5 +1,4 @@
 import * as S from "./styles";
-
 import ModalForm from "../ModalForm";
 import { useState } from "react";
 import Render from "../Render";
@@ -77,30 +76,32 @@ const FullPage = () => {
 
 
   return (
-    <S.FullPage>
-      <ModalForm
-      setCheckedHabilidades={setCheckedHabilidades}
-        setGrauAcademico={setGrauAcademico}
-        handleCheckBeneficios={handleCheckBeneficios}
-        handleCheckHabilidades={handleCheckHabilidades}
-        handleCheckAtividades={handleCheckAtividades}
-        setSelectEtapas={setSelectEtapas}
-        setSalario={setSalario}
-        selectValue={selectValue}
-        setSelectValue={setSelectValue}
-        setTempoExperiencia={setTempoExperiencia}
-      />
-      <Render
-        grauAcademico={grauAcademico}
-        tempoExperiencia={tempoExperiencia}
-        checkedItensBeneficios={checkedItensBeneficios}
-        checkedItensHabilidades={checkedItensHabilidades}
-        checkedItems={checkedItems}
-        selectEtapas={selectEtapas}
-        salario={salario}
-        selectValue={selectValue}
-      />
-    </S.FullPage>
+    <div>
+      <S.FullPage>
+        <ModalForm
+        setCheckedHabilidades={setCheckedHabilidades}
+          setGrauAcademico={setGrauAcademico}
+          handleCheckBeneficios={handleCheckBeneficios}
+          handleCheckHabilidades={handleCheckHabilidades}
+          handleCheckAtividades={handleCheckAtividades}
+          setSelectEtapas={setSelectEtapas}
+          setSalario={setSalario}
+          selectValue={selectValue}
+          setSelectValue={setSelectValue}
+          setTempoExperiencia={setTempoExperiencia}
+        />
+        <Render
+          grauAcademico={grauAcademico}
+          tempoExperiencia={tempoExperiencia}
+          checkedItensBeneficios={checkedItensBeneficios}
+          checkedItensHabilidades={checkedItensHabilidades}
+          checkedItems={checkedItems}
+          selectEtapas={selectEtapas}
+          salario={salario}
+          selectValue={selectValue}
+        />
+      </S.FullPage>
+    </div>
   );
 };
 

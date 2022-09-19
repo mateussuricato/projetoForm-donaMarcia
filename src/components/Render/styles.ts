@@ -47,12 +47,10 @@ export const RenderContainer = styled.div`
 
 export const RenderOverlay = styled.div`
   padding: 4px;
-  position: relative;
-  top: -40px;
   min-width: 587px;
   max-width: 587px;
-  min-height: 820px;
-  max-height: 820px;
+  min-height: 842px;
+  max-height: 842px;
   background-color: white;
   box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.5);
   cursor: default;
