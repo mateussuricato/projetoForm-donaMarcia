@@ -4,7 +4,7 @@ interface CheckBoxProps {
   active?: boolean;
 }
 
-export const FormOverlay = styled.form`
+export const FormOverlay = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 700px;

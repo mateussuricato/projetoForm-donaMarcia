@@ -302,7 +302,7 @@ export const recepcionista = [
 export const tempoexperiencia = [
   {
     id: "c92fea7c-455d-4c09-a796-65261ec80c98",
-    name: "0 ano",
+    name: "Sem experiência",
     categoryCargo: "bad47155-b140-40b3-ad7b-2207019dced8",
   },
   {
@@ -358,11 +358,11 @@ export const etapas = [
 export const beneficios = [
   {
     id: "75911967-e038-4279-9ac6-6f29e2261226",
-    name: "Vale-alimentação",
+    name: "Vale alimentação",
   },
   {
     id: "53359344-145a-4b1c-96a9-e5e3229cc869",
-    name: "Vale-combustível",
+    name: "Vale combustível",
   },
   {
     id: "4c2ce7b6-641b-4c97-a23c-13c80287ab01",
@@ -370,7 +370,7 @@ export const beneficios = [
   },
   {
     id: "a4e87b14-eac3-4168-b02e-1ec45f21f18f",
-    name: "Vale-cultura",
+    name: "Vale cultura",
   },
   {
     id: "9a052fb5-1f6c-4c66-8f30-4f2f3bbf4b9e",
